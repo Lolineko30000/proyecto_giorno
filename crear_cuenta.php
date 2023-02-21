@@ -2,8 +2,6 @@
 //C:\xampp\mysql\bin
 include('Clases/DB.php');
 
-if(isset($_POST['create'])){
-
         #Dedinicion de las variables que se introducen en 
         #el formulario por medio del parametro name
         $nombre = $_POST['name'];

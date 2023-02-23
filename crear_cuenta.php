@@ -11,6 +11,7 @@ if (isset($_POST['create'])) {
     $nombre_usuario = $_POST['username'];
     $contrasenia = $_POST['password'];
     $correo = $_POST['correo'];
+    //sdasdfasdasdas
 
 
     #Comprobacion que el usuario ya exista

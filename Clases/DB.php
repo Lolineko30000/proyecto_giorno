@@ -4,7 +4,7 @@ class DB{
 
       #conexion a la base de datos local
       private static function connect(){
-            $base_de_datos = new PDO('mysql:host=127.0.0.1;dbname=proyecto_final;charset=utf8','root','');
+            $base_de_datos = new PDO('mysql:host=127.0.0.1;dbname=giorno;charset=utf8','root','');
             $base_de_datos ->  setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $base_de_datos;
       }

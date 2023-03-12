@@ -46,6 +46,91 @@ if (isset($_POST['create'])) {
 
 ?>
 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login Giorno</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='./css/style.css'>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Giorno</h2>
+        <nav class="navigation">
+            <a href="#">Viajes</a>
+            <a href="#">Transporte</a>
+            <a href="#">Hoteles</a>
+            <a href="#">Ofertas</a>
+            <button class="btnLogin-popup">Login</button>
+
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Correo</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Contraseña </label>
+                </div>
+                <div class="remeber-forgot">
+                    <label><input type="checkbox">Recuerdame</label>
+                    <a href="#">Olvidaste la contraseña?</a>
+                </div>
+                <button type="submit" class="btn">Inicar sesión</button>
+                <div class="login-register">
+                    <p>No tienes una cuenta? <a href="#" class="register-link">Registrate</a></p>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="form-box register">
+            <h2>Registro</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Usuario</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Correo</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Contraseña </label>
+                </div>
+                <div class="remeber-forgot">
+                    <label><input type="checkbox">Estoy de acurdo
+                        con los terminos</label>
 
                 </div>
                 <button type="submit" class="btn">Registrar</button>

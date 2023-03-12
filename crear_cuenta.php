@@ -4,7 +4,7 @@ include('Clases/DB.php');
 
 if (isset($_POST['create'])) {
 
-    #Dedinicion de las variables que se introducen en 
+    #Dedinicion de las variables que se introducen en
     #el formulario por medio del parametro name
     $nombre = $_POST['name'];
     $apellido = $_POST['surname'];
@@ -82,7 +82,7 @@ if (isset($_POST['create'])) {
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" required>
+                    <input type="text" required>
                     <label>Correo</label>
                 </div>
                 <div class="input-box">
@@ -118,7 +118,7 @@ if (isset($_POST['create'])) {
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" required>
+                    <input type="text" required>
                     <label>Correo</label>
                 </div>
                 <div class="input-box">
@@ -139,13 +139,53 @@ if (isset($_POST['create'])) {
                 </div>
             </form>
         </div>
+
+
     </div>
+    <!-- Pagina de transporte  -->
+    <!-- <div class="wrapper_trnast active-popup">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Transporte</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="bus-outline"></ion-icon>
+                        
+                    </span>
+                    
+                    <input type="text" required>
+                    <label>Text</label>
+                </div>
+                <div class="remeber-forgot">
+                            <label><input type="checkbox"></label>
+                </div>
+                
+                <!-- <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Contraseña </label>
+                </div> -->
+                
+                <button type="submit" class="btn">Reservar</button>
+                <div class="login-register">
+                    <!-- <p>No tienes una cuenta? <a href="#" class="register-link">Registrate</a></p> -->
+                </div>
+            </form>
+        </div>
+    </div> -->
+
     <!--
     <h1>Registro</h1>
     <form action="crear_cuenta.php" method="post">
 
         <input type="text" name="name" value="" placeholder="Nombre(s)..."></p>
-        
+
         <input type="text" name="surname" value="" placeholder="Apellidos..."></p>
 
         <input type="text" name="username" value="" placeholder="Nombre de usuario..."></p>

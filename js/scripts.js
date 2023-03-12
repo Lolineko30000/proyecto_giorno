@@ -1,9 +1,8 @@
 const wrapper = document.querySelector('.wrapper')
 const loginLink = document.querySelector('.login-link')
 const registerLink = document.querySelector('.register-link')
-const btnPop = document.querySelector('.btnLogin-popup')
-const iconClose = document.querySelector('.icon-close')
-
+const btnPop= document.querySelector('.btnLogin-popup')
+const iconClose= document.querySelector('.icon-close')
 
 registerLink.addEventListener('click', () => {
     wrapper.classList.add('active');//cambiar el nombre de la clase wrapper a wrapper active en html

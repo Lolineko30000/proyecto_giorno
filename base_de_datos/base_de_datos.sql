@@ -4,10 +4,8 @@ USE GIORNO;
 CREATE TABLE USUARIO 
     (
       ID_USUARIO int not NULL PRIMARY KEY AUTO_INCREMENT,
-      NOMBRE varchar(255),
-      APELLIDO varchar(255),
-      CORREO varchar(255),
       NOMBRE_USUARIO varchar(255),
+      CORREO varchar(255),
       CONTRASENIA varchar(255)
     );
 

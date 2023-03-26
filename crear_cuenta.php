@@ -971,6 +971,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     -->
     <script src='./js/scripts.js'></script>
     <script src='./js/navigation.js'></script>
+    <script src='./js/jquery-1.9.1.min.js'></script>
+    <script src='./js/nicepage.js'></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!--para buscar los iconos usados en la pagina o nuevos ir al url:https://ionic.io/ionicons -->

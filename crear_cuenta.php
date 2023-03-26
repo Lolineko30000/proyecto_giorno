@@ -499,7 +499,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       </div>
                     </div>
                     <div class="u-form-group u-form-partition-factor-4 u-form-select u-form-group-10">
-                      <label for="select-ffbf" class="u-label">Desplegable</label>
+                      <label for="select-ffbf" class="u-label">Mascotas</label>
                       <div class="u-form-select-wrapper">
                         <select id="select-ffbf" name="select" class="u-input u-input-rectangle">
                           <option value="si" data-calc="">si</option>
@@ -681,7 +681,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       </div>
                     </div>
                     <div class="u-form-group u-form-partition-factor-4 u-form-select u-form-group-23">
-                      <label for="select-ffbf" class="u-label">Desplegable</label>
+                      <label for="select-ffbf" class="u-label">Mascotas</label>
                       <div class="u-form-select-wrapper">
                         <select id="select-ffbf" name="select" class="u-input u-input-rectangle">
                           <option value="si" data-calc="">si</option>
@@ -873,7 +873,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                       </div>
                     </div>
                     <div class="u-form-group u-form-partition-factor-4 u-form-select u-form-group-36">
-                      <label for="select-ffbf" class="u-label">Desplegable</label>
+                      <label for="select-ffbf" class="u-label">Mascotas</label>
                       <div class="u-form-select-wrapper">
                         <select id="select-ffbf" name="select" class="u-input u-input-rectangle">
                           <option value="si" data-calc="">si</option>

@@ -184,10 +184,10 @@ if (isset($_POST['create'])) {
                                 <img src="./images/bus.jpg" alt=""
                                     class="u-expanded-width u-image u-image-default u-image-1" data-image-width="1280"
                                     data-image-height="853" data-lang-es="">
-                                <h4 class="u-text u-text-default u-text-palette-4-base u-text-1" data-lang-es="$ 600">$
-                                    600</h4>
-                                <h5 class="u-text u-text-default u-text-2" data-lang-es="Mountains travel&amp;nbsp;">
-                                    Autobus para todos
+                                    <h4 class="u-text u-text-default u-text-palette-4-base u-text-4" data-lang-es="$ 800">$
+                                    800</h4>
+                                <h5 class="u-text u-text-default u-text-5" data-lang-es="Surf travel">Autobus<br>
+                                </h5>
                                     <br>
                                 </h5>
                                 <p class="u-text u-text-default u-text-3"

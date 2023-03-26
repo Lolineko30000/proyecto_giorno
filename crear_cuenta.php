@@ -450,7 +450,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   </div>
                 </div>
                 <div class="u-form u-form-1">
-                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;" redirect="true" redirect-address="/Los-Cabos.html">
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;" redirect="true" redirect-address="/Vuelos.html">
                     <div class="u-form-group u-form-name u-form-partition-factor-2">
                       <label for="name-4939" class="u-label">Nombres</label>
                       <input type="text" placeholder="Introduzca su nombre" id="name-4939" name="name" class="u-input u-input-rectangle" required="">
@@ -632,7 +632,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <br>Quintana Roo<br>México
                 </h3>
                 <div class="u-form u-form-2">
-                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;" redirect="true" redirect-address="/Los-Cabos.html">
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;" redirect="true" redirect-address="/Vuelos-.html">
                     <div class="u-form-group u-form-name u-form-partition-factor-2">
                       <label for="name-4939" class="u-label">Nombres</label>
                       <input type="text" placeholder="Introduzca su nombre" id="name-4939" name="name" class="u-input u-input-rectangle" required="">
@@ -824,7 +824,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </h3>
                 <p class="u-text u-text-6">Acapulco de Juárez Guerrero México bendecido&nbsp;por las cálidas aguas y el sol los 365 días del año, hermosas playas, un paisaje de inigualable belleza, y gente hospitalaria y amigable.</p>
                 <div class="u-form u-form-3">
-                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;" redirect="true" redirect-address="/Los-Cabos.html">
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;" redirect="true" redirect-address="/Vuelos.html">
                     <div class="u-form-group u-form-name u-form-partition-factor-2">
                       <label for="name-4939" class="u-label">Nombres</label>
                       <input type="text" placeholder="Introduzca su nombre" id="name-4939" name="name" class="u-input u-input-rectangle" required="">

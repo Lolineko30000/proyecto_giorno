@@ -890,4 +890,21 @@
   .u-section-3 .u-text-6 {
     margin-left: 0;
   }
+
+  
+}
+/*Estilo del estado de cada hotel*/
+.estado{
+  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  color: gray;
+}
+/*Estilo del mensaje sobre los precios en hoteles*/
+.precios{
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
 }

@@ -940,15 +940,115 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 
     </div>
     <!-- fin Viajes -->
+
     <!-- hoteles -->
     <div class="hotel">
         <span class="closeH">
             <ion-icon name="close"></ion-icon>
         </span>
         <!-- plantilla aqui -->
+        <section
+            class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-container-align-center-xs u-section-1"
+            id="sec-f731">
+            <!--INFORMACIÓN IMPORTANTE -->
+            <div class="precios">*Los precios son por día de hospedaje <br> *Tocar la imagen para ver más</div>
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-expanded-width u-list u-list-1">
+                  <!--HOTEL ACAPULCO -->
+                    <div class="u-repeater u-repeater-1">
+                        <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+                            <div class="u-container-layout u-similar-container u-container-layout-1">
+                                <!-- Imagen del hotel
+                                Tiene funcion onclick en script.js para que al tocarla cambie de foto-->
+                                <img src="./images/hoteles/Acapulco.jpg" alt=""
+                                  class="u-expanded-width u-image u-image-default u-image-1" data-image-width="1280"
+                                  data-image-height="853" data-lang-es="" id="imgAcapulco" onclick="changeImageAcapulco()"/>
+                                
+                                <!--Precio por día -->
+                                <h4 class="u-text u-text-default u-text-palette-4-base u-text-4" data-lang-es="$ 4000">
+                                Desde $4000</h4>
 
+                                <!--Nombre del hotel -->
+                                <h5 class="u-text u-text-default u-text-5" data-lang-es="Surf travel">Hotel Solé<br>
 
+                                <!--Locación por día -->
+                                <h5 class="estado" data-lang-es="Ocean travel">ACAPULCO<br> </h5>
 
+                                <!--Información -->
+                                <p class="u-text u-text-default u-text-3"
+                                    data-lang-es="Sample text. Click to select the text box. Click again or double click to start editing the text.">
+                                    Hotel Solé es un hotel en Acapulco ubicado en el complejo Mundo Imperial, el cual está formado por el Fórum Mundo Imperial, el paseo al aire libre Promenade y el centro de convenciones Expo Mundo Imperial.
+                                    El hotel se localiza en la zona de Acapulco Diamante, a 700 metros del centro comercial La Isla Acapulco, a 2 kilómetros de la playa y a 3 kilómetros del Aeropuerto Internacional General Juan N Álvarez (ACA). 
+                                    La Costera Miguel Alemán se encuentra a 15 kilómetros de distancia.<br>
+                                </p>
+                                <button type="submit" class="btn">Reservar</button>
+                            </div>
+                        </div>
+                        <!--HOTEL CANCUN-->
+                        <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
+                            <div class="u-container-layout u-similar-container u-container-layout-2">
+                              <!-- Imagen del hotel
+                                Tiene funcion onclick en script.js para que al tocarla cambie de foto-->
+                                <img src="./images/hoteles/Cancun.jpg" alt=""
+                                  class="u-expanded-width u-image u-image-default u-image-2" data-image-width="1280"
+                                  data-image-height="853" data-lang-es="" id="imgCancun" onclick="changeImageCancun()"/>
+
+                                <!--Precio por día -->
+                                <h4 class="u-text u-text-default u-text-palette-4-base u-text-4" data-lang-es="$ 6000">
+                                    Desde $6000</h4>
+
+                                <!--Nombre -->
+                                <h5 class="u-text u-text-default u-text-5" data-lang-es="Surf travel">Hotel Rose<br>
+                                </h5>
+
+                                <!--Lugar -->
+                                <h5 class="estado" data-lang-es="Ocean travel">CANCÚN<br> </h5>
+
+                                <!--Información -->
+                                <p class="u-text u-text-default u-text-6"
+                                    data-lang-es="Sample text. Click to select the text box. Click again or double click to start editing the text.">
+                                    Rose es un hotel familiar y todo incluido localizado frente a la playa en la Zona Hotelera de Cancún. Esta propiedad con temática italiana ofrece actividades para toda la familia, así como un laboratorio de música donde se pueden tomar clases de guitarra o batería.
+                                    Además hay cuatro piscinas, una de ellas en forma de laguna y una para niños con juegos. 
+                                    También tiene cinco restaurantes de comida internacional gourmet, de especialidad mexicana y asiática, y siete bares y lounges donde se sirven bebidas, cocteles y vinos nacionales e importados.<br><br>
+                                </p>
+                                <button type="submit" class="btn">Reservar</button>
+                            </div>
+                        </div>
+                        <!--HOTEL PTO VALLARTA-->
+                        <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-3">
+                            <div class="u-container-layout u-similar-container u-container-layout-3">
+                              <!-- Imagen del hotel
+                                Tiene funcion onclick en script.js para que al tocarla cambie de foto-->
+                                <img src="./images/hoteles/PuertoVallarta.jpg" alt=""
+                                  class="u-expanded-width u-image u-image-default u-image-3" data-image-width="1280"
+                                  data-image-height="853" data-lang-es="" id="imgPuertoVallarta" onclick="changeImageVallarta()"/>
+                                
+                                <!--Precio por día -->
+                                <h4 class="u-text u-text-default u-text-palette-4-base u-text-7" data-lang-es="$ 700">
+                                  Desde $7000</h4>
+
+                                <!--Nombre -->
+                                <h5 class="u-text u-text-default u-text-8" data-lang-es="Ocean travel">Hotel Spiaggia<br>
+                                </h5>
+
+                                <!--Lugar -->
+                                <h5 class="estado" data-lang-es="Ocean travel">PUERTO VALLARTA<br>
+                                </h5>
+
+                                <!--Información -->
+                                <p class="u-text u-text-default u-text-9"
+                                    data-lang-es="Sample text. Click to select the text box. Click again or double click to start editing the text.">
+                                    Spiaggia es un hotel de playa familiar todo incluido ubicado en la Bahía de Banderas en Puerto Vallarta. Tiene una arquitectura mexicana contemporánea y está rodeado por la Sierra Madre Ocidental.
+                                    Cuenta con 291 confortables habitaciones y suites, una variada oferta gastronómica y actividades para toda la familia. 
+                                    Las habitaciones están equipadas con balcón o terraza, televisión con canales por cable, aire acondicionado, minibar resurtido diariamente y wifi. <br>
+                                </p>
+                                <button type="submit" class="btn">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <!-- fin hotel -->
     <!--

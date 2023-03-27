@@ -6,7 +6,8 @@ CREATE TABLE USUARIO
       ID_USUARIO int not NULL PRIMARY KEY AUTO_INCREMENT,
       NOMBRE_USUARIO varchar(255),
       CORREO varchar(255),
-      CONTRASENIA varchar(255)
+      CONTRASENIA varchar(255),
+      TOKEN varchar(255)
     );
 
 CREATE TABLE VIAJE 

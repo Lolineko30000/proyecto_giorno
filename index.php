@@ -117,6 +117,7 @@ if (isset($_POST['logn'])) {
 </head>
 
 <body>
+  <!-- Barra de navegacion -->
   <header>
     <h2 class="logo">Giorno</h2>
     <nav class="navigation">
@@ -135,11 +136,15 @@ if (isset($_POST['logn'])) {
     </nav>
   </header>
   <!-- fin barra de navegacion -->
+
+
   <!-- Login register -->
   <div class="wrapper">
     <span class="icon-close">
       <ion-icon name="close"></ion-icon>
     </span>
+
+
     <!-- login -->
     <div class="form-box login">
       <h2>Login</h2>
@@ -169,6 +174,8 @@ if (isset($_POST['logn'])) {
       </form>
     </div>
     <!-- fin login -->
+
+
     <!-- register -->
     <div class="form-box register">
       <h2>Registro</h2>
@@ -197,7 +204,6 @@ if (isset($_POST['logn'])) {
         <div class="remeber-forgot">
           <label><input type="checkbox">Estoy de acurdo
             con los terminos</label>
-
         </div>
         <button type="submit" class="btn">Registrar</button>
         <div class="login-register">
@@ -206,8 +212,11 @@ if (isset($_POST['logn'])) {
       </form>
     </div>
     <!-- fin register -->
+
+
   </div>
   <!-- fin login register -->
+
 
   <!-- Transportes -->
   <div class="transport">
@@ -220,6 +229,8 @@ if (isset($_POST['logn'])) {
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
+
+
             <!-- Autobus -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
               <div class="u-container-layout u-similar-container u-container-layout-1">
@@ -236,11 +247,17 @@ if (isset($_POST['logn'])) {
                   no tener que
                   manejar<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin autobus -->
+
+
             <!-- Carro -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
               <div class="u-container-layout u-similar-container u-container-layout-2">
@@ -256,11 +273,17 @@ if (isset($_POST['logn'])) {
                   Puede rentar uno de nuestros autos por si desea conocer su lugar de hospedaje y
                   mas<br><br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin carro -->
+
+
             <!-- bici -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-3">
@@ -277,11 +300,17 @@ if (isset($_POST['logn'])) {
                   experiencia de un pueblito
                   mágico&nbsp; <br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin bici -->
+
+
             <!-- moto -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-4">
               <div class="u-container-layout u-similar-container u-container-layout-4">
@@ -298,11 +327,17 @@ if (isset($_POST['logn'])) {
                   vivir una experiencia
                   inolvidable<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin moto -->
+
+
             <!-- burro -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-5">
               <div class="u-container-layout u-similar-container u-container-layout-5">
@@ -319,11 +354,17 @@ if (isset($_POST['logn'])) {
                   cobrar si nos da un
                   paseo en el :)<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin burro -->
+
+
             <!-- pata -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-6">
               <div class="u-container-layout u-similar-container u-container-layout-6">
@@ -339,17 +380,25 @@ if (isset($_POST['logn'])) {
                   O puede optar por caminar siendo una opción muy económica para usted y de paso hacer
                   ejercicio<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin pata -->
+
+
           </div>
         </div>
       </div>
     </section>
   </div>
   <!-- fin transport -->
+
+
   <!-- Viajes -->
   <div class="viajes">
     <span class="closeV">
@@ -357,6 +406,8 @@ if (isset($_POST['logn'])) {
     </span>
     <!-- plantilla aqui -->
     <section>
+
+
       <!-- intro -->
       <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="800"
         data-image-height="511" id="sec-253e">
@@ -384,6 +435,8 @@ if (isset($_POST['logn'])) {
         </div>
       </section>
       <!-- fin intro -->
+
+
       <!-- intro 2 -->
       <section class="u-clearfix u-grey-5 u-section-2" id="sec-0cb0">
         <div class="u-clearfix u-sheet u-sheet-1">
@@ -431,12 +484,13 @@ if (isset($_POST['logn'])) {
         <!-- fin intro 2 -->
 
 
-
         <!-- reserva hoteles -->
         <header class="u-clearfix u-header u-header" id="sec-c0ed">
           <section class="u-align-center u-clearfix u-white u-section-2" id="sec-605b">
             <div class="u-clearfix u-sheet u-sheet-1">
               <div class="u-accordion u-spacing-2 u-accordion-1">
+
+
                 <!-- opc de vuelo 1 -->
                 <div class="u-accordion-item u-accordion-item-1">
                   <a class="active u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-1"
@@ -507,12 +561,18 @@ if (isset($_POST['logn'])) {
                       </div>
                       <p class="u-text u-text-palette-1-base u-text-10">Acapulco</p>
                       <p class="u-text u-text-palette-5-base u-text-11">Terminal 1</p>
+
+
                       <!-- boton reservar vuelo -->
                       <button type="submit" class="btn">Reservar</button>
+
+
                     </div>
                   </div>
                 </div>
                 <!-- fin opc vuelo 1 -->
+
+
                 <!-- opc vuelo 2 -->
                 <div class="u-accordion-item u-accordion-item-2">
                   <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-2"
@@ -600,12 +660,18 @@ if (isset($_POST['logn'])) {
                       </div>
                       <p class="u-text u-text-palette-1-base u-text-21">Acapulco</p>
                       <p class="u-text u-text-palette-5-base u-text-22">Terminal 1</p>
+
+
                       <!-- boton reservar vuelo -->
                       <button type="submit" class="btn">Reservar</button>
+
+
                     </div>
                   </div>
                 </div>
                 <!-- fin opc vuelo 2 -->
+
+                
                 <!-- vuelo 3 -->
                 <div class="u-accordion-item u-accordion-item-3">
                   <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-3"
@@ -701,19 +767,27 @@ if (isset($_POST['logn'])) {
                       </div>
                       <p class="u-text u-text-palette-1-base u-text-32">Acapulco</p>
                       <p class="u-text u-text-palette-5-base u-text-33">Terminal 1</p>
+
+
                       <!-- boton reservar vuelo -->
                       <button type="submit" class="btn">Reservar</button>
+
+
                     </div>
                   </div>
                 </div>
                 <!-- fin opc vuelo 3 -->
+
+
               </div>
             </div>
           </section>
 
-  </div>
 
+  </div>
   <!-- fin Viajes -->
+
+  
   <!-- hoteles -->
   <div class="hotel">
     <span class="closeH">
@@ -721,6 +795,8 @@ if (isset($_POST['logn'])) {
     </span>
     <!-- plantilla aqui -->
   </div>
+
+
   <script src='./js/scripts.js'></script>
   <script src='./js/navigation.js'></script>
   <script src='./js/jquery-1.9.1.min.js'></script>
@@ -728,6 +804,7 @@ if (isset($_POST['logn'])) {
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!--para buscar los iconos usados en la pagina o nuevos ir al url:https://ionic.io/ionicons -->
-</body>
 
+
+</body>
 </html>

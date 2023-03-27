@@ -60,7 +60,7 @@ if (isset($_POST['create'])) {
 
   <link rel="stylesheet" href="./css/nicepage.css" media="screen">
   <link rel="stylesheet" href="./css/Page-10.css" media="screen">
-
+  <link rel="stylesheet" href="./css/Vuelos.css" media="screen">
   <link rel="stylesheet" href="./css/Destinos.css" media="screen">
 
   <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
@@ -70,17 +70,8 @@ if (isset($_POST['create'])) {
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
-
-
-
-  <script type="application/ld+json">{
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": "",
-    "logo": "images/default-logo.png"
-}</script>
   <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="Destinos">
+  <meta property="og:title" content="Vuelos">
   <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/">
 
@@ -94,7 +85,6 @@ if (isset($_POST['create'])) {
       <button class="btnViajes">Viajes</button>
       <button class="btnTransport">Transporte</button>
       <button class="btnHoteles">Hoteles</button>
-      <button class="btnTransport">Ofertas</button>
       <button class="btnLogin-popup">Login</button>
 
     </nav>
@@ -183,6 +173,7 @@ if (isset($_POST['create'])) {
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
+            <!-- Autobus -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <img src="./images/bus.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-1"
@@ -191,7 +182,6 @@ if (isset($_POST['create'])) {
                   800</h4>
                 <h5 class="u-text u-text-default u-text-5" data-lang-es="Surf travel">Autobus<br>
                 </h5>
-                <br>
                 </h5>
                 <p class="u-text u-text-default u-text-3"
                   data-lang-es="Sample text. Click to select the text box. Click again or double click to start editing the text.">
@@ -199,9 +189,12 @@ if (isset($_POST['create'])) {
                   no tener que
                   manejar<br>
                 </p>
+                <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
               </div>
             </div>
+            <!-- fin autobus -->
+            <!-- Carro -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
               <div class="u-container-layout u-similar-container u-container-layout-2">
                 <img src="./images/car.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-2"
@@ -216,9 +209,12 @@ if (isset($_POST['create'])) {
                   Puede rentar uno de nuestros autos por si desea conocer su lugar de hospedaje y
                   mas<br><br>
                 </p>
+                <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
               </div>
             </div>
+            <!-- fin carro -->
+            <!-- bici -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-3">
                 <img src="./images/bici.png" alt="" class="u-expanded-width u-image u-image-default u-image-3"
@@ -234,9 +230,12 @@ if (isset($_POST['create'])) {
                   experiencia de un pueblito
                   mágico&nbsp; <br>
                 </p>
+                <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
               </div>
             </div>
+            <!-- fin bici -->
+            <!-- moto -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-4">
               <div class="u-container-layout u-similar-container u-container-layout-4">
                 <img src="./images/moto.png" alt="" class="u-expanded-width u-image u-image-default u-image-4"
@@ -252,9 +251,12 @@ if (isset($_POST['create'])) {
                   vivir una experiencia
                   inolvidable<br>
                 </p>
+                <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
               </div>
             </div>
+            <!-- fin moto -->
+            <!-- burro -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-5">
               <div class="u-container-layout u-similar-container u-container-layout-5">
                 <img src="images/burro.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-5"
@@ -270,9 +272,12 @@ if (isset($_POST['create'])) {
                   cobrar si nos da un
                   paseo en el :)<br>
                 </p>
+                <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
               </div>
             </div>
+            <!-- fin burro -->
+            <!-- pata -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-6">
               <div class="u-container-layout u-similar-container u-container-layout-6">
                 <img src="./images/walk.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-6"
@@ -287,9 +292,11 @@ if (isset($_POST['create'])) {
                   O puede optar por caminar siendo una opción muy económica para usted y de paso hacer
                   ejercicio<br>
                 </p>
+                <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
               </div>
             </div>
+            <!-- fin pata -->
           </div>
         </div>
       </div>
@@ -303,6 +310,7 @@ if (isset($_POST['create'])) {
     </span>
     <!-- plantilla aqui -->
     <section>
+      <!-- intro -->
       <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="800"
         data-image-height="511" id="sec-253e">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -323,10 +331,13 @@ if (isset($_POST['create'])) {
               </lt-div>
             </lt-div>
           </lt-highlighter>
-          <p class="u-large-text u-text u-text-variant u-text-2">Conoce todos los destinos que tenemos disponibles que
+          <p class="u-large-text u-text u-text-variant u-text-2">Conoce todos los destinos que tenemos
+            disponibles que
             tenemos para ti en Giorno Viajes.</p>
         </div>
       </section>
+      <!-- fin intro -->
+      <!-- intro 2 -->
       <section class="u-clearfix u-grey-5 u-section-2" id="sec-0cb0">
         <div class="u-clearfix u-sheet u-sheet-1">
           <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
@@ -352,9 +363,12 @@ if (isset($_POST['create'])) {
                         </lt-div>
                       </lt-div>
                     </lt-highlighter>
-                    <p class="u-align-center u-text u-text-2"> Agua cálida, arena blanca y brisa suave: hay una razón
-                      por la que México es un destino de playa tan popular. Desde las exclusivas bahías color turquesa
-                      hasta las animadas playas de fiesta, México ofrece algo para cada tipo de persona, generalmente
+                    <p class="u-align-center u-text u-text-2"> Agua cálida, arena blanca y brisa
+                      suave: hay una razón
+                      por la que México es un destino de playa tan popular. Desde las exclusivas
+                      bahías color turquesa
+                      hasta las animadas playas de fiesta, México ofrece algo para cada tipo de
+                      persona, generalmente
                       ubicado en un entorno pintoresco..</p>
                   </div>
                 </div>
@@ -367,795 +381,288 @@ if (isset($_POST['create'])) {
             </div>
           </div>
         </div>
-      </section>
-      <section class="u-clearfix u-section-3" id="sec-43fe">
-        <div class="u-clearfix u-sheet u-sheet-1">
-          <div class="u-accordion u-spacing-2 u-accordion-1">
-            <div class="u-accordion-item u-accordion-item-1">
-              <a class="active u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-1"
-                id="link-311f" aria-controls="311f" aria-selected="true">
-                <lt-highlighter class="lt-highlighter--grid-item" style="display: none;">
-                  <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                    style="width: 120px; height: 26px; transform: none !important; transform-origin: 60.1094px 12.7969px !important; zoom: 1 !important; margin-top: 465px; margin-left: 30px;">
-                    <lt-div class="lt-highlighter__scroll-element"
-                      style="top: 0px; left: 0px; width: 120px; height: 26px;"></lt-div>
-                  </lt-div>
-                </lt-highlighter>
-                <span class="u-accordion-link-text">Puerto Vallarta</span><span
-                  class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-1"><svg class="u-svg-link"
-                    preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style="">
-                    <use xlink:href="#svg-568d"></use>
-                  </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-568d">
-                    <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+        <!-- fin intro 2 -->
+
+
+
+        <!-- reserva hoteles -->
+        <header class="u-clearfix u-header u-header" id="sec-c0ed">
+          <section class="u-align-center u-clearfix u-white u-section-2" id="sec-605b">
+            <div class="u-clearfix u-sheet u-sheet-1">
+              <div class="u-accordion u-spacing-2 u-accordion-1">
+                <!-- opc de vuelo 1 -->
+                <div class="u-accordion-item u-accordion-item-1">
+                  <a class="active u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-1"
+                    id="link-3a05" aria-controls="3a05" aria-selected="true">
+                    <lt-highlighter class="lt-highlighter--grid-item" style="display: none;">
+                      <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                        style="width: 120px; height: 26px; transform: none !important; transform-origin: 60.1094px 12.7969px !important; zoom: 1 !important; margin-top: 296px; margin-left: 30px;">
+                        <lt-div class="lt-highlighter__scroll-element"
+                          style="top: 0px; left: 0px; width: 120px; height: 26px;">
+                        </lt-div>
+                      </lt-div>
+                    </lt-highlighter>
+                    <span class="u-accordion-link-text"><span class="u-file-icon u-icon u-icon-1"><img
+                          src="images/61212.png" alt=""></span>&nbsp;​&nbsp;6:30 AM *********** 7:10
+                      AM&nbsp;<br>&nbsp;
+                      &nbsp; &nbsp; México&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; Acapulco&nbsp;
+                    </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-2"><svg class="u-svg-link"
+                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style="">
+                        <use xlink:href="#svg-2d49"></use>
+                      </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-2d49">
+                        <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
   c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
-                  </svg></span>
-              </a>
-              <div class="u-accordion-active u-accordion-pane u-align-left u-container-style u-accordion-pane-1"
-                id="311f" aria-labelledby="link-311f">
-                <div class="u-container-layout u-container-layout-1">
-                  <p class="u-text u-text-1">Si algo define a&nbsp;Puerto Vallarta&nbsp;es el encanto natural de sus
-                    playas abrazadas por la Sierra Madre; la esencia de su&nbsp;cultura,
-                    su&nbsp;gastronomía&nbsp;y&nbsp;tradiciones; y la calidez de su&nbsp;hospitalidad&nbsp;como quien da
-                    la bienvenida a casa a un amigo. Este mágico destino guarda un auténtico espíritu mexicano</p>
-                  <h3 class="u-text u-text-2">Puerto Vallarta<br>
-                    <br>Jalisco<br>México
-                  </h3>
-                  <div
-                    class="u-carousel u-gallery u-layout-thumbnails u-lightbox u-no-transition u-show-text-always u-gallery-1"
-                    data-interval="5000" data-u-ride="carousel" id="carousel-5b77">
-                    <div class="u-carousel-inner u-gallery-inner" role="listbox">
-                      <div class="u-active u-carousel-item u-gallery-item u-carousel-item-1">
-                        <div class="u-back-slide" data-image-width="1920" data-image-height="650">
-                          <img class="u-back-image u-expanded"
-                            src="https://visitapuertovallarta.com.mx/uploads/305/principales-atracciones-en-puerto-vallarta.jpg">
-                        </div>
-                        <div class="u-over-slide u-over-slide-1">
-                          <h3 class="u-gallery-heading">Título de ejemplo</h3>
-                          <p class="u-gallery-text">Texto de ejemplo</p>
-                        </div>
+                      </svg></span>
+                  </a>
+                  <div class="u-accordion-active u-accordion-pane u-align-left u-container-style u-accordion-pane-1"
+                    id="3a05" aria-labelledby="link-3a05">
+                    <div class="u-container-layout u-container-layout-1">
+                      <!-- <div class="u-border-3 u-border-grey-dark-1 u-line u-line-vertical u-line-1">
+                      </div> -->
+                      <h5 class="u-text u-text-default u-text-1">Duración 40 min</h5>
+                      <h6 class="u-text u-text-2">$160 + TUA<br>MXN/&nbsp; &nbsp;&nbsp;
+                      </h6><span class="u-icon u-text-black u-icon-3"><svg class="u-svg-link"
+                          preserveAspectRatio="xMidYMin slice" viewBox="0 0 55 55" style="">
+                          <use xlink:href="#svg-d263"></use>
+                        </svg><svg class="u-svg-content" viewBox="0 0 55 55" x="0px" y="0px" id="svg-d263"
+                          style="enable-background:new 0 0 55 55;">
+                          <path d="M55,27.5C55,12.337,42.663,0,27.5,0S0,12.337,0,27.5c0,8.009,3.444,15.228,8.926,20.258l-0.026,0.023l0.892,0.752
+  c0.058,0.049,0.121,0.089,0.179,0.137c0.474,0.393,0.965,0.766,1.465,1.127c0.162,0.117,0.324,0.234,0.489,0.348
+  c0.534,0.368,1.082,0.717,1.642,1.048c0.122,0.072,0.245,0.142,0.368,0.212c0.613,0.349,1.239,0.678,1.88,0.98
+  c0.047,0.022,0.095,0.042,0.142,0.064c2.089,0.971,4.319,1.684,6.651,2.105c0.061,0.011,0.122,0.022,0.184,0.033
+  c0.724,0.125,1.456,0.225,2.197,0.292c0.09,0.008,0.18,0.013,0.271,0.021C25.998,54.961,26.744,55,27.5,55
+  c0.749,0,1.488-0.039,2.222-0.098c0.093-0.008,0.186-0.013,0.279-0.021c0.735-0.067,1.461-0.164,2.178-0.287
+  c0.062-0.011,0.125-0.022,0.187-0.034c2.297-0.412,4.495-1.109,6.557-2.055c0.076-0.035,0.153-0.068,0.229-0.104
+  c0.617-0.29,1.22-0.603,1.811-0.936c0.147-0.083,0.293-0.167,0.439-0.253c0.538-0.317,1.067-0.648,1.581-1
+  c0.185-0.126,0.366-0.259,0.549-0.391c0.439-0.316,0.87-0.642,1.289-0.983c0.093-0.075,0.193-0.14,0.284-0.217l0.915-0.764
+  l-0.027-0.023C51.523,42.802,55,35.55,55,27.5z M2,27.5C2,13.439,13.439,2,27.5,2S53,13.439,53,27.5
+  c0,7.577-3.325,14.389-8.589,19.063c-0.294-0.203-0.59-0.385-0.893-0.537l-8.467-4.233c-0.76-0.38-1.232-1.144-1.232-1.993v-2.957
+  c0.196-0.242,0.403-0.516,0.617-0.817c1.096-1.548,1.975-3.27,2.616-5.123c1.267-0.602,2.085-1.864,2.085-3.289v-3.545
+  c0-0.867-0.318-1.708-0.887-2.369v-4.667c0.052-0.52,0.236-3.448-1.883-5.864C34.524,9.065,31.541,8,27.5,8
+  s-7.024,1.065-8.867,3.168c-2.119,2.416-1.935,5.346-1.883,5.864v4.667c-0.568,0.661-0.887,1.502-0.887,2.369v3.545
+  c0,1.101,0.494,2.128,1.34,2.821c0.81,3.173,2.477,5.575,3.093,6.389v2.894c0,0.816-0.445,1.566-1.162,1.958l-7.907,4.313
+  c-0.252,0.137-0.502,0.297-0.752,0.476C5.276,41.792,2,35.022,2,27.5z"></path>
+                        </svg></span>
+                      <p class="u-text u-text-3">6:30 AM<span style="font-weight: 700;"></span>
+                      </p>
+                      <p class="u-text u-text-palette-1-base u-text-4">Ciudad de México</p>
+                      <p class="u-text u-text-palette-5-base u-text-5">Termilal 1</p>
+                      <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-circle u-shape-1">
                       </div>
-                      <div class="u-carousel-item u-gallery-item u-carousel-item-2">
-                        <div class="u-back-slide" data-image-width="1920" data-image-height="650">
-                          <img class="u-back-image u-expanded"
-                            src="https://visitapuertovallarta.com.mx/uploads/static/mexico-puerto-vallarta.jpg">
-                        </div>
-                        <div class="u-over-slide u-over-slide-2">
-                          <h3 class="u-gallery-heading">Título de ejemplo</h3>
-                          <p class="u-gallery-text">Texto de ejemplo</p>
-                        </div>
+                      <h4 class="u-text u-text-default u-text-6">Vuelo 1 </h4>
+                      <h4 class="u-text u-text-default u-text-7">VV-1234 </h4><span
+                        class="u-file-icon u-icon u-icon-4"><img src="images/4379086.png" alt=""></span>
+                      <h4 class="u-text u-text-default u-text-8">Tarifa z</h4>
+                      <p class="u-text u-text-9">7:10 Am</p>
+                      <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-circle u-shape-2">
                       </div>
-                      <div class="u-carousel-item u-gallery-item u-carousel-item-3" data-image-width="800"
-                        data-image-height="1000">
-                        <div class="u-back-slide">
-                          <img class="u-back-image u-expanded"
-                            src="https://visitapuertovallarta.com.mx/uploads/127/marina-vallarta-movil.jpg">
-                        </div>
-                        <div class="u-over-slide u-over-slide-3">
-                          <h3 class="u-gallery-heading"></h3>
-                          <p class="u-gallery-text"></p>
-                        </div>
-                        <style data-mode="XL"></style>
-                        <style data-mode="LG"></style>
-                        <style data-mode="MD"></style>
-                        <style data-mode="SM"></style>
-                        <style data-mode="XS"></style>
-                      </div>
-                    </div>
-                    <a class="u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1"
-                      href="#carousel-5b77" role="button" data-u-slide="prev">
-                      <span aria-hidden="true">
-                        <svg viewBox="0 0 451.847 451.847">
-                          <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
-                        </svg>
-                      </span>
-                      <span class="sr-only">
-                        <svg viewBox="0 0 451.847 451.847">
-                          <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
-                        </svg>
-                      </span>
-                    </a>
-                    <a class="u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2"
-                      href="#carousel-5b77" role="button" data-u-slide="next">
-                      <span aria-hidden="true">
-                        <svg viewBox="0 0 451.846 451.847">
-                          <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
-                        </svg>
-                      </span>
-                      <span class="sr-only">
-                        <svg viewBox="0 0 451.846 451.847">
-                          <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
-                        </svg>
-                      </span>
-                    </a>
-                    <ol class="u-carousel-thumbnails u-spacing-10 u-carousel-thumbnails-1">
-                      <li class="u-active u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-5b77"
-                        data-u-slide-to="0">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://visitapuertovallarta.com.mx/uploads/305/principales-atracciones-en-puerto-vallarta.jpg">
-                      </li>
-                      <li class="u-carousel-thumbnail u-carousel-thumbnail-2" data-u-target="#carousel-5b77"
-                        data-u-slide-to="1">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://visitapuertovallarta.com.mx/uploads/static/mexico-puerto-vallarta.jpg">
-                      </li>
-                      <li class="u-carousel-thumbnail u-carousel-thumbnail-3" data-u-target="#carousel-5b77"
-                        data-u-slide-to="2">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://visitapuertovallarta.com.mx/uploads/127/marina-vallarta-movil.jpg">
-                      </li>
-                    </ol>
-                  </div>
-                  <div class="u-grey-light-2 u-map u-map-1">
-                    <div class="embed-responsive">
-                      <iframe class="embed-responsive-item"
-                        src="https://maps.google.com/maps?output=embed&amp;q=puerto%20vallarta%2C%20mexico&amp;t=m"
-                        data-map="JTdCJTIycG9zaXRpb25UeXBlJTIyJTNBJTIybWFwLWFkZHJlc3MlMjIlMkMlMjJhZGRyZXNzJTIyJTNBJTIycHVlcnRvJTIwdmFsbGFydGElMkMlMjBtZXhpY28lMjIlMkMlMjJ6b29tJTIyJTNBbnVsbCUyQyUyMnR5cGVJZCUyMiUzQSUyMnJvYWQlMjIlMkMlMjJsYW5nJTIyJTNBbnVsbCUyQyUyMmFwaUtleSUyMiUzQW51bGwlMkMlMjJtYXJrZXJzJTIyJTNBJTVCJTVEJTdE"></iframe>
-                    </div>
-                  </div>
-                  <div class="u-form u-form-1">
-                    <form action="https://forms.nicepagesrv.com/v2/form/process"
-                      class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1"
-                      style="padding: 10px;" redirect="true" redirect-address="/Vuelos.html">
-                      <div class="u-form-group u-form-name u-form-partition-factor-2">
-                        <label for="name-4939" class="u-label">Nombres</label>
-                        <input type="text" placeholder="Introduzca su nombre" id="name-4939" name="name"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2">
-                        <label for="name-bc33" class="u-label">Apellidos</label>
-                        <input type="text" placeholder="Introduzca sus Apellidos" id="name-bc33" name="name-2"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-email u-form-group u-form-partition-factor-2">
-                        <label for="email-4939" class="u-label">Email</label>
-                        <input type="email" placeholder="Introduzca una dirección de correo electrónico válida"
-                          id="email-4939" name="email" class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-4">
-                        <label for="phone-cabc" class="u-label">Teléfono</label>
-                        <lt-highlighter style="display: none;">
-                          <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                            style="width: 268px; height: 46px; transform: none !important; transform-origin: 135px 23.7969px !important; zoom: 1 !important; margin-top: 32px; margin-left: 1px;">
-                            <lt-div class="lt-highlighter__scroll-element"
-                              style="top: 0px; left: 0px; width: 268px; height: 46px;"></lt-div>
-                          </lt-div>
-                        </lt-highlighter>
-                        <input type="tel"
-                          pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})"
-                          placeholder="Ingrese su teléfono (por ejemplo, +14155552675)" id="phone-cabc" name="celular"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-5">
-                        <label for="date-2633" class="u-label">Llegada</label>
-                        <input type="text" readonly="readonly" placeholder="MM/DD/AAAA" id="date-2633" name="date"
-                          class="u-input u-input-rectangle" required="" data-date-format="mm/dd/yyyy">
-                      </div>
-                      <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-6">
-                        <label for="date-1a54" class="u-label">Salida</label>
-                        <input type="text" readonly="readonly" placeholder="MM/DD/AAAA" id="date-1a54" name="date-1"
-                          class="u-input u-input-rectangle" required="" data-date-format="mm/dd/yyyy">
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-7">
-                        <label for="number-2037" class="u-label">Adultos</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-2037"
-                            name="number-1" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-8">
-                        <label for="number-bc0d" class="u-label">Niños</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-bc0d"
-                            name="number" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-9">
-                        <label for="number-6055" class="u-label">Tercera edad</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-6055"
-                            name="number-2" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div class="u-form-group u-form-partition-factor-4 u-form-select u-form-group-10">
-                        <label for="select-ffbf" class="u-label">Mascotas</label>
-                        <div class="u-form-select-wrapper">
-                          <select id="select-ffbf" name="select" class="u-input u-input-rectangle">
-                            <option value="si" data-calc="">si</option>
-                            <option value="No" data-calc="">No</option>
-                          </select>
-                          <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
-                            viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve">
-                            <polygon class="st0" points="8,12 2,4 14,4 "></polygon>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="u-form-checkbox-group u-form-group u-form-group-11">
-                        <label class="u-label">Quiero Buscar</label>
-                        <div class="u-form-checkbox-group-wrapper">
-                          <div class="u-input-row">
-                            <input id="field-945f" type="checkbox" name="checkbox[]" value="Hoteles"
-                              class="u-field-input" checked="checked" data-calc="">
-                            <label class="u-field-label" for="field-945f">Hoteles</label>
-                          </div>
-                          <div class="u-input-row">
-                            <input id="field-ce80" type="checkbox" name="checkbox[]" value="Vuelos"
-                              class="u-field-input" data-calc="">
-                            <label class="u-field-label" for="field-ce80">Vuelos</label>
-                          </div>
-                          <div class="u-input-row">
-                            <input id="field-b073" type="checkbox" name="checkbox[]" value="Transporte"
-                              class="u-field-input" data-calc="">
-                            <label class="u-field-label" for="field-b073">Transporte</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="u-form-agree u-form-group u-form-group-12">
-                        <label class="u-field-label" style=""></label>
-                        <input type="checkbox" id="agree-4021" name="agree" class="u-agree-checkbox u-field-input"
-                          required="">
-                        <label for="agree-4021" class="u-agree-label u-field-label">Yo acepto los <a
-                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
-                            href="#">Términos de servicio</a>
-                        </label>
-                      </div>
-                      <div class="u-align-left u-form-group u-form-submit">
-                        <a href="#"
-                          class="u-btn u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">Buscar</a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
-                      <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
-                      <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor,
-                        corrija los errores y vuelva a intentarlo. </div>
-                      <input type="hidden" value="" name="recaptchaResponse">
-                      <input type="hidden" name="formServices" value="d3bf3c355c7c8d62bd5e883f282b693b">
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-accordion-item u-accordion-item-2">
-              <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-2"
-                id="link-311f" aria-controls="311f" aria-selected="false">
-                <lt-highlighter class="lt-highlighter--grid-item" style="display: none;">
-                  <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                    style="width: 120px; height: 26px; transform: none !important; transform-origin: 60.1094px 12.7969px !important; zoom: 1 !important; margin-top: 465px; margin-left: 30px;">
-                    <lt-div class="lt-highlighter__scroll-element"
-                      style="top: 0px; left: 0px; width: 120px; height: 26px;"></lt-div>
-                  </lt-div>
-                </lt-highlighter>
-                <span class="u-accordion-link-text">Cancún</span><span
-                  class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-2"><svg class="u-svg-link"
-                    preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style="">
-                    <use xlink:href="#svg-73b8"></use>
-                  </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-73b8">
-                    <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
-  c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
-                  </svg></span>
-              </a>
-              <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-2" id="311f"
-                aria-labelledby="link-311f">
-                <div class="u-container-layout u-container-layout-2">
-                  <div
-                    class="u-carousel u-gallery u-layout-thumbnails u-lightbox u-no-transition u-show-text-always u-gallery-2"
-                    data-interval="5000" data-u-ride="carousel" id="carousel-5b77">
-                    <div class="u-carousel-inner u-gallery-inner" role="listbox">
-                      <div class="u-active u-carousel-item u-gallery-item u-carousel-item-4">
-                        <div class="u-back-slide" data-image-width="1047" data-image-height="1309">
-                          <img class="u-back-image u-expanded"
-                            src="https://s3.amazonaws.com/crowdriff-media/full/8c59601f61e6d14a7b98a8b4ea56b2e6be3c1bd1b9f3f67d49bac27885123320.jpg">
-                        </div>
-                        <div class="u-over-slide u-over-slide-4">
-                          <h3 class="u-gallery-heading">Título de ejemplo</h3>
-                          <p class="u-gallery-text">Texto de ejemplo</p>
-                        </div>
-                      </div>
-                      <div class="u-carousel-item u-gallery-item u-carousel-item-5">
-                        <div class="u-back-slide" data-image-width="1200" data-image-height="700">
-                          <img class="u-back-image u-expanded"
-                            src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_700,q_75,w_1200/v1/clients/quintanaroo/ISLAMUJERES_MUSA_c0e20c91-6044-4eb9-abb7-169c4bc5d76b.jpg">
-                        </div>
-                        <div class="u-over-slide u-over-slide-5">
-                          <h3 class="u-gallery-heading">Título de ejemplo</h3>
-                          <p class="u-gallery-text">Texto de ejemplo</p>
-                        </div>
-                      </div>
-                      <div class="u-carousel-item u-gallery-item u-carousel-item-6" data-image-width="1080"
-                        data-image-height="1350">
-                        <div class="u-back-slide">
-                          <img class="u-back-image u-expanded"
-                            src="https://s3.amazonaws.com/crowdriff-media/full/f3666cfd394d57ea6f84dd67e39846558df1ce1d97ba27df7ac9d3c98fba6324.jpg">
-                        </div>
-                        <div class="u-over-slide u-over-slide-6">
-                          <h3 class="u-gallery-heading"></h3>
-                          <p class="u-gallery-text"></p>
-                        </div>
-                        <style data-mode="XL"></style>
-                        <style data-mode="LG"></style>
-                        <style data-mode="MD"></style>
-                        <style data-mode="SM"></style>
-                        <style data-mode="XS"></style>
-                      </div>
-                    </div>
-                    <a class="u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-3"
-                      href="#carousel-5b77" role="button" data-u-slide="prev">
-                      <span aria-hidden="true">
-                        <svg viewBox="0 0 451.847 451.847">
-                          <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
-                        </svg>
-                      </span>
-                      <span class="sr-only">
-                        <svg viewBox="0 0 451.847 451.847">
-                          <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
-                        </svg>
-                      </span>
-                    </a>
-                    <a class="u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-4"
-                      href="#carousel-5b77" role="button" data-u-slide="next">
-                      <span aria-hidden="true">
-                        <svg viewBox="0 0 451.846 451.847">
-                          <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
-                        </svg>
-                      </span>
-                      <span class="sr-only">
-                        <svg viewBox="0 0 451.846 451.847">
-                          <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
-                        </svg>
-                      </span>
-                    </a>
-                    <ol class="u-carousel-thumbnails u-spacing-10 u-carousel-thumbnails-2">
-                      <li class="u-active u-carousel-thumbnail u-carousel-thumbnail-4" data-u-target="#carousel-5b77"
-                        data-u-slide-to="0">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://s3.amazonaws.com/crowdriff-media/full/8c59601f61e6d14a7b98a8b4ea56b2e6be3c1bd1b9f3f67d49bac27885123320.jpg">
-                      </li>
-                      <li class="u-carousel-thumbnail u-carousel-thumbnail-5" data-u-target="#carousel-5b77"
-                        data-u-slide-to="1">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_700,q_75,w_1200/v1/clients/quintanaroo/ISLAMUJERES_MUSA_c0e20c91-6044-4eb9-abb7-169c4bc5d76b.jpg">
-                      </li>
-                      <li class="u-carousel-thumbnail u-carousel-thumbnail-6" data-u-target="#carousel-5b77"
-                        data-u-slide-to="2">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://s3.amazonaws.com/crowdriff-media/full/f3666cfd394d57ea6f84dd67e39846558df1ce1d97ba27df7ac9d3c98fba6324.jpg">
-                      </li>
-                    </ol>
-                  </div>
-                  <p class="u-text u-text-3">Cancún es una ciudad de México ubicada en la península de Yucatán que
-                    limita con el mar Caribe y que es conocida por sus playas, los numerosos centros turísticos y la
-                    vida nocturna.</p>
-                  <h3 class="u-text u-text-4">Cancún<br>
-                    <br>Quintana Roo<br>México
-                  </h3>
-                  <div class="u-form u-form-2">
-                    <form action="https://forms.nicepagesrv.com/v2/form/process"
-                      class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1"
-                      style="padding: 10px;" redirect="true" redirect-address="/Vuelos-.html">
-                      <div class="u-form-group u-form-name u-form-partition-factor-2">
-                        <label for="name-4939" class="u-label">Nombres</label>
-                        <input type="text" placeholder="Introduzca su nombre" id="name-4939" name="name"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-15">
-                        <label for="name-bc33" class="u-label">Apellidos</label>
-                        <input type="text" placeholder="Introduzca sus Apellidos" id="name-bc33" name="name-2"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-email u-form-group u-form-partition-factor-2">
-                        <label for="email-4939" class="u-label">Email</label>
-                        <input type="email" placeholder="Introduzca una dirección de correo electrónico válida"
-                          id="email-4939" name="email" class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-17">
-                        <label for="phone-cabc" class="u-label">Teléfono</label>
-                        <lt-highlighter style="display: none;">
-                          <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                            style="width: 268px; height: 46px; transform: none !important; transform-origin: 135px 23.7969px !important; zoom: 1 !important; margin-top: 32px; margin-left: 1px;">
-                            <lt-div class="lt-highlighter__scroll-element"
-                              style="top: 0px; left: 0px; width: 268px; height: 46px;"></lt-div>
-                          </lt-div>
-                        </lt-highlighter>
-                        <input type="tel"
-                          pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})"
-                          placeholder="Ingrese su teléfono (por ejemplo, +14155552675)" id="phone-cabc" name="celular"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-18">
-                        <label for="date-2633" class="u-label">Llegada</label>
-                        <input type="text" readonly="readonly" placeholder="MM/DD/AAAA" id="date-2633" name="date"
-                          class="u-input u-input-rectangle" required="" data-date-format="mm/dd/yyyy">
-                      </div>
-                      <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-19">
-                        <label for="date-1a54" class="u-label">Salida</label>
-                        <input type="text" readonly="readonly" placeholder="MM/DD/AAAA" id="date-1a54" name="date-1"
-                          class="u-input u-input-rectangle" required="" data-date-format="mm/dd/yyyy">
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-20">
-                        <label for="number-2037" class="u-label">Adultos</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-2037"
-                            name="number-1" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-21">
-                        <label for="number-bc0d" class="u-label">Niños</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-bc0d"
-                            name="number" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-22">
-                        <label for="number-6055" class="u-label">Tercera edad</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-6055"
-                            name="number-2" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div class="u-form-group u-form-partition-factor-4 u-form-select u-form-group-23">
-                        <label for="select-ffbf" class="u-label">Mascotas</label>
-                        <div class="u-form-select-wrapper">
-                          <select id="select-ffbf" name="select" class="u-input u-input-rectangle">
-                            <option value="si" data-calc="">si</option>
-                            <option value="No" data-calc="">No</option>
-                          </select>
-                          <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
-                            viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve">
-                            <polygon class="st0" points="8,12 2,4 14,4 "></polygon>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="u-form-checkbox-group u-form-group u-form-group-24">
-                        <label class="u-label">Quiero Buscar</label>
-                        <div class="u-form-checkbox-group-wrapper">
-                          <div class="u-input-row">
-                            <input id="field-945f" type="checkbox" name="checkbox[]" value="Hoteles"
-                              class="u-field-input" checked="checked" data-calc="">
-                            <label class="u-field-label" for="field-945f">Hoteles</label>
-                          </div>
-                          <div class="u-input-row">
-                            <input id="field-ce80" type="checkbox" name="checkbox[]" value="Vuelos"
-                              class="u-field-input" data-calc="">
-                            <label class="u-field-label" for="field-ce80">Vuelos</label>
-                          </div>
-                          <div class="u-input-row">
-                            <input id="field-b073" type="checkbox" name="checkbox[]" value="Transporte"
-                              class="u-field-input" data-calc="">
-                            <label class="u-field-label" for="field-b073">Transporte</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="u-form-agree u-form-group u-form-group-25">
-                        <label class="u-field-label" style=""></label>
-                        <input type="checkbox" id="agree-4021" name="agree" class="u-agree-checkbox u-field-input"
-                          required="">
-                        <label for="agree-4021" class="u-agree-label u-field-label">Yo acepto los <a
-                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3"
-                            href="#">Términos de servicio</a>
-                        </label>
-                      </div>
-                      <div class="u-align-left u-form-group u-form-submit">
-                        <a href="#"
-                          class="u-btn u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-4">Buscar</a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
-                      <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
-                      <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor,
-                        corrija los errores y vuelva a intentarlo. </div>
-                      <input type="hidden" value="" name="recaptchaResponse">
-                      <input type="hidden" name="formServices" value="d3bf3c355c7c8d62bd5e883f282b693b">
-                    </form>
-                  </div>
-                  <div class="u-grey-light-2 u-map u-map-2">
-                    <div class="embed-responsive">
-                      <iframe class="embed-responsive-item"
-                        src="https://maps.google.com/maps?output=embed&amp;q=canc%C3%BAn%2C%20mexico&amp;t=m"
-                        data-map="JTdCJTIycG9zaXRpb25UeXBlJTIyJTNBJTIybWFwLWFkZHJlc3MlMjIlMkMlMjJhZGRyZXNzJTIyJTNBJTIyY2FuYyVDMyVCQW4lMkMlMjBtZXhpY28lMjIlMkMlMjJ6b29tJTIyJTNBbnVsbCUyQyUyMnR5cGVJZCUyMiUzQSUyMnJvYWQlMjIlMkMlMjJsYW5nJTIyJTNBbnVsbCUyQyUyMmFwaUtleSUyMiUzQW51bGwlMkMlMjJtYXJrZXJzJTIyJTNBJTVCJTVEJTdE"></iframe>
+                      <p class="u-text u-text-palette-1-base u-text-10">Acapulco</p>
+                      <p class="u-text u-text-palette-5-base u-text-11">Terminal 1</p>
+                      <button type="submit" class="btn">Reservar</button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="u-accordion-item">
-              <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-3"
-                id="link-311f" aria-controls="311f" aria-selected="false">
-                <lt-highlighter class="lt-highlighter--grid-item" style="display: none;">
-                  <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                    style="width: 120px; height: 26px; transform: none !important; transform-origin: 60.1094px 12.7969px !important; zoom: 1 !important; margin-top: 465px; margin-left: 30px;">
-                    <lt-div class="lt-highlighter__scroll-element"
-                      style="top: 0px; left: 0px; width: 120px; height: 26px;"></lt-div>
-                  </lt-div>
-                </lt-highlighter>
-                <span class="u-accordion-link-text">Acapulco</span><span
-                  class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-3"><svg class="u-svg-link"
-                    preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style="">
-                    <use xlink:href="#svg-88d7"></use>
-                  </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-88d7">
-                    <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+                <!-- fin opc vuelo 1 -->
+                <!-- opc vuelo 2 -->
+                <div class="u-accordion-item u-accordion-item-2">
+                  <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-2"
+                    id="link-3a05" aria-controls="3a05" aria-selected="false">
+                    <lt-highlighter class="lt-highlighter--grid-item" style="display: none;">
+                      <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                        style="width: 120px; height: 26px; transform: none !important; transform-origin: 60.1094px 12.7969px !important; zoom: 1 !important; margin-top: 296px; margin-left: 30px;">
+                        <lt-div class="lt-highlighter__scroll-element"
+                          style="top: 0px; left: 0px; width: 120px; height: 26px;">
+                        </lt-div>
+                      </lt-div>
+                    </lt-highlighter>
+                    <span class="u-accordion-link-text"><span class="u-file-icon u-icon u-icon-5"><img
+                          src="images/61212.png" alt=""></span>&nbsp;​ 7:50 AM *********** 8:30
+                      AM&nbsp;<br>&nbsp;
+                      &nbsp;
+                      &nbsp; México&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; Acapulco&nbsp;
+                    </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-6"><svg class="u-svg-link"
+                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style="">
+                        <use xlink:href="#svg-9a3c"></use>
+                      </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-9a3c">
+                        <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
   c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
-                  </svg></span>
-              </a>
-              <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-3" id="311f"
-                aria-labelledby="link-311f">
-                <div class="u-container-layout u-container-layout-3">
-                  <div
-                    class="u-carousel u-gallery u-layout-thumbnails u-lightbox u-no-transition u-show-text-always u-gallery-3"
-                    data-interval="5000" data-u-ride="carousel" id="carousel-5b77">
-                    <div class="u-carousel-inner u-gallery-inner" role="listbox">
-                      <div class="u-active u-carousel-item u-gallery-item u-carousel-item-7">
-                        <div class="u-back-slide" data-image-width="800" data-image-height="533">
-                          <img class="u-back-image u-expanded"
-                            src="https://a.cdn-hotels.com/gdcs/production124/d1362/161ed68d-9d61-4edc-b4af-7d40f9b0c465.jpg?impolicy=fcrop&amp;w=800&amp;h=533&amp;q=medium">
-                        </div>
-                        <div class="u-over-slide u-over-slide-7">
-                          <h3 class="u-gallery-heading">Título de ejemplo</h3>
-                          <p class="u-gallery-text">Texto de ejemplo</p>
-                        </div>
-                      </div>
-                      <div class="u-carousel-item u-gallery-item u-carousel-item-8">
-                        <div class="u-back-slide" data-image-width="1040" data-image-height="580">
-                          <img class="u-back-image u-expanded"
-                            src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/137000/137741-Acapulco-And-Vicinity.jpg?impolicy=fcrop&amp;w=1040&amp;h=580&amp;q=mediumHigh">
-                        </div>
-                        <div class="u-over-slide u-over-slide-8">
-                          <h3 class="u-gallery-heading">Título de ejemplo</h3>
-                          <p class="u-gallery-text">Texto de ejemplo</p>
-                        </div>
-                      </div>
-                      <div class="u-carousel-item u-gallery-item u-carousel-item-9" data-image-width="1004"
-                        data-image-height="565">
-                        <div class="u-back-slide">
-                          <img class="u-back-image u-expanded"
-                            src="https://mediaim.expedia.com/localexpert/437176/5510646b-6197-4514-8c8b-24179d81b08b.jpg?impolicy=resizecrop&amp;rw=1005&amp;rh=565">
-                        </div>
-                        <div class="u-over-slide u-over-slide-9">
-                          <h3 class="u-gallery-heading"></h3>
-                          <p class="u-gallery-text"></p>
-                        </div>
-                        <style data-mode="XL"></style>
-                        <style data-mode="LG"></style>
-                        <style data-mode="MD"></style>
-                        <style data-mode="SM"></style>
-                        <style data-mode="XS"></style>
-                      </div>
-                    </div>
-                    <a class="u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-5"
-                      href="#carousel-5b77" role="button" data-u-slide="prev">
-                      <span aria-hidden="true">
-                        <svg viewBox="0 0 451.847 451.847">
-                          <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
-                        </svg>
-                      </span>
-                      <span class="sr-only">
-                        <svg viewBox="0 0 451.847 451.847">
-                          <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
-                        </svg>
-                      </span>
-                    </a>
-                    <a class="u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-6"
-                      href="#carousel-5b77" role="button" data-u-slide="next">
-                      <span aria-hidden="true">
-                        <svg viewBox="0 0 451.846 451.847">
-                          <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
-                        </svg>
-                      </span>
-                      <span class="sr-only">
-                        <svg viewBox="0 0 451.846 451.847">
-                          <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
-                        </svg>
-                      </span>
-                    </a>
-                    <ol class="u-carousel-thumbnails u-spacing-10 u-carousel-thumbnails-3">
-                      <li class="u-active u-carousel-thumbnail u-carousel-thumbnail-7" data-u-target="#carousel-5b77"
-                        data-u-slide-to="0">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://a.cdn-hotels.com/gdcs/production124/d1362/161ed68d-9d61-4edc-b4af-7d40f9b0c465.jpg?impolicy=fcrop&amp;w=800&amp;h=533&amp;q=medium">
-                      </li>
-                      <li class="u-carousel-thumbnail u-carousel-thumbnail-8" data-u-target="#carousel-5b77"
-                        data-u-slide-to="1">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/137000/137741-Acapulco-And-Vicinity.jpg?impolicy=fcrop&amp;w=1040&amp;h=580&amp;q=mediumHigh">
-                      </li>
-                      <li class="u-carousel-thumbnail u-carousel-thumbnail-9" data-u-target="#carousel-5b77"
-                        data-u-slide-to="2">
-                        <img class="u-carousel-thumbnail-image u-image"
-                          src="https://mediaim.expedia.com/localexpert/437176/5510646b-6197-4514-8c8b-24179d81b08b.jpg?impolicy=resizecrop&amp;rw=1005&amp;rh=565">
-                      </li>
-                    </ol>
-                  </div>
-                  <div class="u-grey-light-2 u-map u-map-3">
-                    <div class="embed-responsive">
-                      <iframe class="embed-responsive-item"
-                        src="https://maps.google.com/maps?output=embed&amp;q=acapulco&amp;t=m"
-                        data-map="JTdCJTIycG9zaXRpb25UeXBlJTIyJTNBJTIybWFwLWFkZHJlc3MlMjIlMkMlMjJhZGRyZXNzJTIyJTNBJTIyYWNhcHVsY28lMjIlMkMlMjJ6b29tJTIyJTNBbnVsbCUyQyUyMnR5cGVJZCUyMiUzQSUyMnJvYWQlMjIlMkMlMjJsYW5nJTIyJTNBbnVsbCUyQyUyMmFwaUtleSUyMiUzQW51bGwlMkMlMjJtYXJrZXJzJTIyJTNBJTVCJTVEJTdE"></iframe>
-                    </div>
-                  </div>
-                  <h3 class="u-text u-text-5">Acapulco<br>
-                    <br>Guerrero<br>México
-                  </h3>
-                  <p class="u-text u-text-6">Acapulco de Juárez Guerrero México bendecido&nbsp;por las cálidas aguas y
-                    el sol los 365 días del año, hermosas playas, un paisaje de inigualable belleza, y gente
-                    hospitalaria y amigable.</p>
-                  <div class="u-form u-form-3">
-                    <form action="https://forms.nicepagesrv.com/v2/form/process"
-                      class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1"
-                      style="padding: 10px;" redirect="true" redirect-address="/Vuelos.html">
-                      <div class="u-form-group u-form-name u-form-partition-factor-2">
-                        <label for="name-4939" class="u-label">Nombres</label>
-                        <input type="text" placeholder="Introduzca su nombre" id="name-4939" name="name"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-28">
-                        <label for="name-bc33" class="u-label">Apellidos</label>
-                        <input type="text" placeholder="Introduzca sus Apellidos" id="name-bc33" name="name-2"
-                          class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-email u-form-group u-form-partition-factor-2">
-                        <label for="email-4939" class="u-label">Email</label>
-                        <input type="email" placeholder="Introduzca una dirección de correo electrónico válida"
-                          id="email-4939" name="email" class="u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-30">
-                        <label for="phone-cabc" class="u-label">Teléfono</label>
-                        <lt-highlighter style="display: none;">
-                          <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                            style="width: 268px; height: 46px; transform: none !important; transform-origin: 135px 23.7969px !important; zoom: 1 !important; margin-top: 32px; margin-left: 1px;">
-                            <lt-div class="lt-highlighter__scroll-element"
-                              style="top: 0px; left: 0px; width: 268px; height: 46px;"></lt-div>
+                      </svg></span>
+                  </a>
+                  <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-2" id="3a05"
+                    aria-labelledby="link-3a05">
+                    <div class="u-container-layout u-container-layout-2">
+                      <!-- <div class="u-border-3 u-border-grey-dark-1 u-line u-line-vertical u-line-2">
+                      </div> -->
+                      <h5 class="u-text u-text-default u-text-12">Duración 40 min</h5>
+                      <h6 class="u-text u-text-13">$160 + TUA<br>MXN/&nbsp; &nbsp;&nbsp;
+                      </h6><span class="u-icon u-text-black u-icon-7"><svg class="u-svg-link"
+                          preserveAspectRatio="xMidYMin slice" viewBox="0 0 55 55" style="">
+                          <use xlink:href="#svg-f443"></use>
+                        </svg><svg class="u-svg-content" viewBox="0 0 55 55" x="0px" y="0px" id="svg-f443"
+                          style="enable-background:new 0 0 55 55;">
+                          <path d="M55,27.5C55,12.337,42.663,0,27.5,0S0,12.337,0,27.5c0,8.009,3.444,15.228,8.926,20.258l-0.026,0.023l0.892,0.752
+  c0.058,0.049,0.121,0.089,0.179,0.137c0.474,0.393,0.965,0.766,1.465,1.127c0.162,0.117,0.324,0.234,0.489,0.348
+  c0.534,0.368,1.082,0.717,1.642,1.048c0.122,0.072,0.245,0.142,0.368,0.212c0.613,0.349,1.239,0.678,1.88,0.98
+  c0.047,0.022,0.095,0.042,0.142,0.064c2.089,0.971,4.319,1.684,6.651,2.105c0.061,0.011,0.122,0.022,0.184,0.033
+  c0.724,0.125,1.456,0.225,2.197,0.292c0.09,0.008,0.18,0.013,0.271,0.021C25.998,54.961,26.744,55,27.5,55
+  c0.749,0,1.488-0.039,2.222-0.098c0.093-0.008,0.186-0.013,0.279-0.021c0.735-0.067,1.461-0.164,2.178-0.287
+  c0.062-0.011,0.125-0.022,0.187-0.034c2.297-0.412,4.495-1.109,6.557-2.055c0.076-0.035,0.153-0.068,0.229-0.104
+  c0.617-0.29,1.22-0.603,1.811-0.936c0.147-0.083,0.293-0.167,0.439-0.253c0.538-0.317,1.067-0.648,1.581-1
+  c0.185-0.126,0.366-0.259,0.549-0.391c0.439-0.316,0.87-0.642,1.289-0.983c0.093-0.075,0.193-0.14,0.284-0.217l0.915-0.764
+  l-0.027-0.023C51.523,42.802,55,35.55,55,27.5z M2,27.5C2,13.439,13.439,2,27.5,2S53,13.439,53,27.5
+  c0,7.577-3.325,14.389-8.589,19.063c-0.294-0.203-0.59-0.385-0.893-0.537l-8.467-4.233c-0.76-0.38-1.232-1.144-1.232-1.993v-2.957
+  c0.196-0.242,0.403-0.516,0.617-0.817c1.096-1.548,1.975-3.27,2.616-5.123c1.267-0.602,2.085-1.864,2.085-3.289v-3.545
+  c0-0.867-0.318-1.708-0.887-2.369v-4.667c0.052-0.52,0.236-3.448-1.883-5.864C34.524,9.065,31.541,8,27.5,8
+  s-7.024,1.065-8.867,3.168c-2.119,2.416-1.935,5.346-1.883,5.864v4.667c-0.568,0.661-0.887,1.502-0.887,2.369v3.545
+  c0,1.101,0.494,2.128,1.34,2.821c0.81,3.173,2.477,5.575,3.093,6.389v2.894c0,0.816-0.445,1.566-1.162,1.958l-7.907,4.313
+  c-0.252,0.137-0.502,0.297-0.752,0.476C5.276,41.792,2,35.022,2,27.5z"></path>
+                        </svg></span>
+                      <lt-highlighter style="display: none; z-index: 1 !important;">
+                        <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                          style="width: 118px; height: 32px; transform: none !important; transform-origin: 58.8984px 16px !important; zoom: 1 !important; margin-top: 16px; margin-left: 637px;">
+                          <lt-div class="lt-highlighter__scroll-element"
+                            style="top: 0px; left: 0px; width: 118px; height: 32px;">
                           </lt-div>
-                        </lt-highlighter>
-                        <input type="tel"
-                          pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})"
-                          placeholder="Ingrese su teléfono (por ejemplo, +14155552675)" id="phone-cabc" name="celular"
-                          class="u-input u-input-rectangle" required="">
+                        </lt-div>
+                      </lt-highlighter>
+                      <p class="u-text u-text-14">7:50 AM<span style="font-weight: 700;"></span>
+                      </p>
+                      <p class="u-text u-text-palette-1-base u-text-15">Ciudad de México</p>
+                      <p class="u-text u-text-palette-5-base u-text-16">Termilal 1</p>
+                      <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-circle u-shape-3">
                       </div>
-                      <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-31">
-                        <label for="date-2633" class="u-label">Llegada</label>
-                        <input type="text" readonly="readonly" placeholder="MM/DD/AAAA" id="date-2633" name="date"
-                          class="u-input u-input-rectangle" required="" data-date-format="mm/dd/yyyy">
+                      <h4 class="u-text u-text-default u-text-17">Vuelo 1 </h4>
+                      <lt-highlighter style="display: none; z-index: 1 !important;">
+                        <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                          style="width: 91px; height: 29px; transform: none !important; transform-origin: 45.3203px 14.3984px !important; zoom: 1 !important; margin-top: 8px; margin-left: 109px;">
+                          <lt-div class="lt-highlighter__scroll-element"
+                            style="top: 0px; left: 0px; width: 91px; height: 29px;">
+                          </lt-div>
+                        </lt-div>
+                      </lt-highlighter>
+                      <h4 class="u-text u-text-default u-text-18">VV-5678 </h4><span
+                        class="u-file-icon u-icon u-icon-8"><img src="images/4379086.png" alt=""></span>
+                      <h4 class="u-text u-text-default u-text-19">Tarifa z</h4>
+                      <p class="u-text u-text-20">8:30 AM</p>
+                      <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-circle u-shape-4">
                       </div>
-                      <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-32">
-                        <label for="date-1a54" class="u-label">Salida</label>
-                        <input type="text" readonly="readonly" placeholder="MM/DD/AAAA" id="date-1a54" name="date-1"
-                          class="u-input u-input-rectangle" required="" data-date-format="mm/dd/yyyy">
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-33">
-                        <label for="number-2037" class="u-label">Adultos</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-2037"
-                            name="number-1" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-34">
-                        <label for="number-bc0d" class="u-label">Niños</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-bc0d"
-                            name="number" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div
-                        class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-4 u-form-group-35">
-                        <label for="number-6055" class="u-label">Tercera edad</label>
-                        <div class="u-input-row" data-value="0">
-                          <input value="0" min="0" max="100" step="1" type="number" placeholder="" id="number-6055"
-                            name="number-2" class="u-input u-input-rectangle">
-                        </div>
-                      </div>
-                      <div class="u-form-group u-form-partition-factor-4 u-form-select u-form-group-36">
-                        <label for="select-ffbf" class="u-label">Mascotas</label>
-                        <div class="u-form-select-wrapper">
-                          <select id="select-ffbf" name="select" class="u-input u-input-rectangle">
-                            <option value="si" data-calc="">si</option>
-                            <option value="No" data-calc="">No</option>
-                          </select>
-                          <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
-                            viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve">
-                            <polygon class="st0" points="8,12 2,4 14,4 "></polygon>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="u-form-checkbox-group u-form-group u-form-group-37">
-                        <label class="u-label">Quiero Buscar</label>
-                        <div class="u-form-checkbox-group-wrapper">
-                          <div class="u-input-row">
-                            <input id="field-945f" type="checkbox" name="checkbox[]" value="Hoteles"
-                              class="u-field-input" checked="checked" data-calc="">
-                            <label class="u-field-label" for="field-945f">Hoteles</label>
-                          </div>
-                          <div class="u-input-row">
-                            <input id="field-ce80" type="checkbox" name="checkbox[]" value="Vuelos"
-                              class="u-field-input" data-calc="">
-                            <label class="u-field-label" for="field-ce80">Vuelos</label>
-                          </div>
-                          <div class="u-input-row">
-                            <input id="field-b073" type="checkbox" name="checkbox[]" value="Transporte"
-                              class="u-field-input" data-calc="">
-                            <label class="u-field-label" for="field-b073">Transporte</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="u-form-agree u-form-group u-form-group-38">
-                        <label class="u-field-label" style=""></label>
-                        <input type="checkbox" id="agree-4021" name="agree" class="u-agree-checkbox u-field-input"
-                          required="">
-                        <label for="agree-4021" class="u-agree-label u-field-label">Yo acepto los <a
-                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5"
-                            href="#">Términos de servicio</a>
-                        </label>
-                      </div>
-                      <div class="u-align-left u-form-group u-form-submit">
-                        <a href="#"
-                          class="u-btn u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-6">Buscar</a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
-                      <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
-                      <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor,
-                        corrija los errores y vuelva a intentarlo. </div>
-                      <input type="hidden" value="" name="recaptchaResponse">
-                      <input type="hidden" name="formServices" value="d3bf3c355c7c8d62bd5e883f282b693b">
-                    </form>
+                      <p class="u-text u-text-palette-1-base u-text-21">Acapulco</p>
+                      <p class="u-text u-text-palette-5-base u-text-22">Terminal 1</p>
+                      <button type="submit" class="btn">Reservar</button>
+                    </div>
                   </div>
                 </div>
+                <!-- fin opc vuelo 2 -->
+                <!-- vuelo 3 -->
+                <div class="u-accordion-item u-accordion-item-3">
+                  <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-3"
+                    id="link-3a05" aria-controls="3a05" aria-selected="false">
+                    <lt-highlighter class="lt-highlighter--grid-item" style="display: none;">
+                      <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                        style="width: 120px; height: 26px; transform: none !important; transform-origin: 60.1094px 12.7969px !important; zoom: 1 !important; margin-top: 296px; margin-left: 30px;">
+                        <lt-div class="lt-highlighter__scroll-element"
+                          style="top: 0px; left: 0px; width: 120px; height: 26px;">
+                        </lt-div>
+                      </lt-div>
+                    </lt-highlighter>
+                    <span class="u-accordion-link-text"><span class="u-file-icon u-icon u-icon-9"><img
+                          src="images/61212.png" alt=""></span>&nbsp;​ 9:30 AM ***********
+                      10:30AM&nbsp;<br>&nbsp;
+                      &nbsp;
+                      &nbsp; México&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; Acapulco&nbsp;
+                    </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-10"><svg class="u-svg-link"
+                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style="">
+                        <use xlink:href="#svg-093f"></use>
+                      </svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-093f">
+                        <path d="M8,10.7L1.6,5.3c-0.4-0.4-1-0.4-1.3,0c-0.4,0.4-0.4,0.9,0,1.3l7.2,6.1c0.1,0.1,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2l7.1-6
+  c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
+                      </svg></span>
+                  </a>
+                  <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-3" id="3a05"
+                    aria-labelledby="link-3a05">
+                    <div class="u-container-layout u-container-layout-3">
+                      <!-- <div class="u-border-3 u-border-grey-dark-1 u-line u-line-vertical u-line-3">
+                      </div> -->
+                      <h5 class="u-text u-text-default u-text-23">Duración 40 min</h5>
+                      <h6 class="u-text u-text-24">$160 + TUA<br>MXN/&nbsp; &nbsp;&nbsp;
+                      </h6><span class="u-icon u-text-black u-icon-11"><svg class="u-svg-link"
+                          preserveAspectRatio="xMidYMin slice" viewBox="0 0 55 55" style="">
+                          <use xlink:href="#svg-6670"></use>
+                        </svg><svg class="u-svg-content" viewBox="0 0 55 55" x="0px" y="0px" id="svg-6670"
+                          style="enable-background:new 0 0 55 55;">
+                          <path d="M55,27.5C55,12.337,42.663,0,27.5,0S0,12.337,0,27.5c0,8.009,3.444,15.228,8.926,20.258l-0.026,0.023l0.892,0.752
+  c0.058,0.049,0.121,0.089,0.179,0.137c0.474,0.393,0.965,0.766,1.465,1.127c0.162,0.117,0.324,0.234,0.489,0.348
+  c0.534,0.368,1.082,0.717,1.642,1.048c0.122,0.072,0.245,0.142,0.368,0.212c0.613,0.349,1.239,0.678,1.88,0.98
+  c0.047,0.022,0.095,0.042,0.142,0.064c2.089,0.971,4.319,1.684,6.651,2.105c0.061,0.011,0.122,0.022,0.184,0.033
+  c0.724,0.125,1.456,0.225,2.197,0.292c0.09,0.008,0.18,0.013,0.271,0.021C25.998,54.961,26.744,55,27.5,55
+  c0.749,0,1.488-0.039,2.222-0.098c0.093-0.008,0.186-0.013,0.279-0.021c0.735-0.067,1.461-0.164,2.178-0.287
+  c0.062-0.011,0.125-0.022,0.187-0.034c2.297-0.412,4.495-1.109,6.557-2.055c0.076-0.035,0.153-0.068,0.229-0.104
+  c0.617-0.29,1.22-0.603,1.811-0.936c0.147-0.083,0.293-0.167,0.439-0.253c0.538-0.317,1.067-0.648,1.581-1
+  c0.185-0.126,0.366-0.259,0.549-0.391c0.439-0.316,0.87-0.642,1.289-0.983c0.093-0.075,0.193-0.14,0.284-0.217l0.915-0.764
+  l-0.027-0.023C51.523,42.802,55,35.55,55,27.5z M2,27.5C2,13.439,13.439,2,27.5,2S53,13.439,53,27.5
+  c0,7.577-3.325,14.389-8.589,19.063c-0.294-0.203-0.59-0.385-0.893-0.537l-8.467-4.233c-0.76-0.38-1.232-1.144-1.232-1.993v-2.957
+  c0.196-0.242,0.403-0.516,0.617-0.817c1.096-1.548,1.975-3.27,2.616-5.123c1.267-0.602,2.085-1.864,2.085-3.289v-3.545
+  c0-0.867-0.318-1.708-0.887-2.369v-4.667c0.052-0.52,0.236-3.448-1.883-5.864C34.524,9.065,31.541,8,27.5,8
+  s-7.024,1.065-8.867,3.168c-2.119,2.416-1.935,5.346-1.883,5.864v4.667c-0.568,0.661-0.887,1.502-0.887,2.369v3.545
+  c0,1.101,0.494,2.128,1.34,2.821c0.81,3.173,2.477,5.575,3.093,6.389v2.894c0,0.816-0.445,1.566-1.162,1.958l-7.907,4.313
+  c-0.252,0.137-0.502,0.297-0.752,0.476C5.276,41.792,2,35.022,2,27.5z"></path>
+                        </svg></span>
+                      <lt-highlighter style="display: none; z-index: 1 !important;">
+                        <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                          style="width: 118px; height: 32px; transform: none !important; transform-origin: 58.8984px 16px !important; zoom: 1 !important; margin-top: 16px; margin-left: 637px;">
+                          <lt-div class="lt-highlighter__scroll-element"
+                            style="top: 0px; left: 0px; width: 118px; height: 32px;">
+                          </lt-div>
+                        </lt-div>
+                      </lt-highlighter>
+                      <p class="u-text u-text-25">8:30 AM<span style="font-weight: 700;"></span>
+                      </p>
+                      <p class="u-text u-text-palette-1-base u-text-26">Ciudad de México</p>
+                      <p class="u-text u-text-palette-5-base u-text-27">Termilal 1</p>
+                      <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-circle u-shape-5">
+                      </div>
+                      <h4 class="u-text u-text-default u-text-28">Vuelo 1 </h4>
+                      <lt-highlighter style="display: none; z-index: 1 !important;">
+                        <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                          style="width: 91px; height: 29px; transform: none !important; transform-origin: 45.3203px 14.3984px !important; zoom: 1 !important; margin-top: 8px; margin-left: 109px;">
+                          <lt-div class="lt-highlighter__scroll-element"
+                            style="top: 0px; left: 0px; width: 91px; height: 29px;">
+                          </lt-div>
+                        </lt-div>
+                      </lt-highlighter>
+                      <h4 class="u-text u-text-default u-text-29">VV-1489 </h4><span
+                        class="u-file-icon u-icon u-icon-12"><img src="images/4379086.png" alt=""></span>
+                      <h4 class="u-text u-text-default u-text-30">Tarifa z</h4>
+                      <lt-highlighter style="display: none; z-index: 1 !important;">
+                        <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                          style="width: 118px; height: 32px; transform: none !important; transform-origin: 58.8984px 16px !important; zoom: 1 !important; margin-top: 10px; margin-left: 637px;">
+                          <lt-div class="lt-highlighter__scroll-element"
+                            style="top: 0px; left: 0px; width: 118px; height: 32px;">
+                          </lt-div>
+                        </lt-div>
+                      </lt-highlighter>
+                      <p class="u-text u-text-31">10:30 AM</p>
+                      <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-circle u-shape-6">
+                      </div>
+                      <p class="u-text u-text-palette-1-base u-text-32">Acapulco</p>
+                      <p class="u-text u-text-palette-5-base u-text-33">Terminal 1</p>
+                      <button type="submit" class="btn">Reservar</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin opc vuelo 3 -->
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-      <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-063f">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-          <lt-highlighter style="display: none; z-index: 1 !important;">
-            <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-              style="width: 721px; height: 58px; transform: none !important; transform-origin: 360.375px 28.7969px !important; zoom: 1 !important; margin-top: 50px; margin-left: 210px;">
-              <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 721px; height: 58px;">
-                <canvas class="lt-highlighter__canvas" width="90" height="50"
-                  style="display: none; top: 4px; left: 20px;"></canvas>
-              </lt-div>
-            </lt-div>
-          </lt-highlighter>
-          <p class="u-small-text u-text u-text-variant u-text-1">Estas a punto de comenzar un gran viaje</p>
-        </div>
-      </footer>
-
-
-    </section>>
-
+          </section>
 
   </div>
+
   <!-- fin Viajes -->
   <!-- hoteles -->
   <div class="hotel">
@@ -1163,29 +670,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
       <ion-icon name="close"></ion-icon>
     </span>
     <!-- plantilla aqui -->
-
-
-
   </div>
-  <!-- fin hotel -->
-  <!--
-    <h1>Registro</h1>
-    <form action="crear_cuenta.php" method="post">
-
-        <input type="text" name="name" value="" placeholder="Nombre(s)..."></p>
-
-        <input type="text" name="surname" value="" placeholder="Apellidos..."></p>
-
-        <input type="text" name="username" value="" placeholder="Nombre de usuario..."></p>
-
-        <input type="password" name="password" value="" placeholder="contrasenia..."></p>
-
-        <input type="email" name="correo" value="" placeholder="Email..."></p>
-
-        <input type="submit" name="create" value="Crear cuenta"></p>
-
-    </form>
-    -->
   <script src='./js/scripts.js'></script>
   <script src='./js/navigation.js'></script>
   <script src='./js/jquery-1.9.1.min.js'></script>

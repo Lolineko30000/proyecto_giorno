@@ -124,7 +124,6 @@ if (isset($_POST['logn'])) {
       <button class="btnViajes">Viajes</button>
       <button class="btnTransport">Transporte</button>
       <button class="btnHoteles">Hoteles</button>
-      <button class="btnTransport">Ofertas</button>
 
       <?php
 

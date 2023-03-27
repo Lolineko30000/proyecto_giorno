@@ -342,7 +342,7 @@ if (isset($_POST['logn'])) {
             <ion-icon name="close"></ion-icon>
         </span>
         <!-- plantilla aqui -->
-        <section>
+  <section>
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="800" data-image-height="511" id="sec-253e">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">

@@ -159,7 +159,7 @@ if (isset($_POST['logn'])) {
                   </div>
                   <div class='remeber-forgot'>
                       <!--<label><input type='checkbox'>Recuerdame</label>-->
-                      <a href='#'>Olvidaste la contraseña?</a>
+                      <!-- <a href='#'>Olvidaste la contraseña?</a> -->
                   </div>
                   <button type='submit' class='btn' name='logn'>Inicar sesión</button>
                   <div class='login-register'>

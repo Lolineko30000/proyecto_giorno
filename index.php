@@ -119,11 +119,12 @@ if (isset($_POST['logn'])) {
 <body>
   <!-- Barra de navegacion -->
   <header>
-    <h2 class="logo">Giorno</h2>
+    <img class="logo" src="./css/image/Logo2.png" >
     <nav class="navigation">
       <button class="btnViajes">Viajes</button>
-      <button class="btnTransport">Transporte</button>
       <button class="btnHoteles">Hoteles</button>
+      <button class="btnTransport">Transporte</button>
+      
 
       <?php
 
@@ -224,7 +225,8 @@ if (isset($_POST['logn'])) {
     </span>
     <section
       class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-container-align-center-xs u-section-1"
-      id="sec-f731">
+      id="sec-f731" style="border-radius: 20px;">
+      <h1 class="u-text u-text-default u-title u-text-1" style="color: white">Transportes</h1>
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
@@ -409,7 +411,7 @@ if (isset($_POST['logn'])) {
 
       <!-- intro -->
       <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="800"
-        data-image-height="511" id="sec-253e">
+        data-image-height="511" id="sec-253e" style="border-radius: 20px;">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
           <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
             <lt-div spellcheck="false" class="lt-highlighter__wrapper"
@@ -795,9 +797,9 @@ if (isset($_POST['logn'])) {
     <!-- plantilla aqui -->
     <section
       class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-container-align-center-xs u-section-1"
-      id="sec-f731">
+      id="sec-f731" style="border-radius: 20px;">
       <!--INFORMACIÓN IMPORTANTE -->
-      <div class="precios">*Los precios son por día de hospedaje <br> *Tocar la imagen para ver más</div>
+      <h1 class="u-text u-text-default u-title u-text-1" style="color: white">Hoteles</h1>
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <!--HOTEL ACAPULCO -->

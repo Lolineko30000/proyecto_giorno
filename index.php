@@ -1,13 +1,15 @@
 <?php
 //C:\xampp\mysql\bin
+//mysql.exe -u root -p
+
+
 include('Clases/DB.php');
 
 if (isset($_POST['create'])) {
 
+
   #Dedinicion de las variables que se introducen en
   #el formulario por medio del parametro name
-  $nombre = $_POST['name'];
-  $apellido = $_POST['surname'];
   $nombre_usuario = $_POST['username'];
   $contrasenia = $_POST['password'];
   $correo = $_POST['correo'];
@@ -15,32 +17,59 @@ if (isset($_POST['create'])) {
 
   #Comprobacion que el usuario ya exista
   if (DB::query('SELECT nombre_usuario FROM usuario WHERE nombre_usuario = :nombre_usuario', array(':nombre_usuario' => $nombre_usuario))) {
-    header("Location: index.html");
+    header("Location: index.php");
   }
   #Comprobacion del correo electronico
   elseif (DB::query('SELECT correo FROM usuario WHERE correo = :correo', array(':correo' => $correo))) {
-    header("Location: index.html");
+    header("Location: index.php");
   }
   #Tamanio de la contrasena y el nombre de usuario
   elseif ((strlen($nombre_usuario) < 3 || strlen($nombre_usuario) > 40) && !(preg_match('/[a-zA-Z0-9_]+/', $nombre_usuario))) {
-    header("Location: index.html");
+    header("Location: index.php");
   } elseif (strlen($contrasenia) < 6 || strlen($contrasenia) > 40) {
-    header("Location: index.html");
+    header("Location: index.php");
   } else {
 
     #Encriptacion de la contasenioa pk alch estoy aburrido xd
     $contrasenia = password_hash($contrasenia, PASSWORD_BCRYPT);
     $pk_usuario = 1 + DB::query('SELECT MAX(id_usuario) AS pkt FROM usuario', array())[0]['pkt'];
 
+    $token = bin2hex(openssl_random_pseudo_bytes(100, $aux_token));
+    #setcookie("SNID",$token, time() + 2592000, '/', NULL, NULL,TRUE);
 
     DB::query(
-      'INSERT INTO usuario  VALUES (:id_usuario, :nombre , :apellido , :correo , :nombre_usuario ,:contrasenia)',
-      array(':id_usuario' => $pk_usuario, ':nombre' => $nombre, ':apellido' => $apellido, ':correo' => $correo, 'nombre_usuario' => $nombre_usuario, ':contrasenia' => $contrasenia)
+      'INSERT INTO usuario  VALUES (:id_usuario, :nombre_usuario, :correo  ,:contrasenia, :token)',
+      array(':id_usuario' => $pk_usuario, 'nombre_usuario' => $nombre_usuario, ':correo' => $correo, ':contrasenia' => $contrasenia, ':token' => $token)
     );
 
-    header("Location: index.html");
+
+    header("Location: index.php");
   }
 }
+
+
+if (isset($_POST['logn'])) {
+
+  $contrasenia = $_POST['password'];
+  $correo = $_POST['correo'];
+
+  if (DB::query('SELECT correo FROM usuario WHERE correo = :correo', array(':correo' => $correo))) {
+    $aux = DB::query('SELECT contrasenia FROM usuario WHERE correo = :correo', array(':correo' => $correo))[0]['contrasenia'];
+    if (password_verify($contrasenia, $aux)) {
+
+      $token = DB::query('SELECT token FROM usuario WHERE correo = :correo', array(':correo' => $correo))[0]['token'];
+      setcookie("SNID", $token, time() + 2592000, '/', NULL, NULL, TRUE);
+      header("Location: index.php?TOKEN=" . $token . "");
+
+    } else {
+      echo '<script language="javascript">alert("Contraseña incorrecta");</script>';
+    }
+
+  } else {
+    echo '<script language="javascript">alert("Correo no registrado");</script>';
+  }
+}
+
 
 
 
@@ -61,6 +90,7 @@ if (isset($_POST['create'])) {
   <link rel="stylesheet" href="./css/nicepage.css" media="screen">
   <link rel="stylesheet" href="./css/Page-10.css" media="screen">
   <link rel="stylesheet" href="./css/Vuelos.css" media="screen">
+
   <link rel="stylesheet" href="./css/Destinos.css" media="screen">
 
   <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
@@ -70,8 +100,17 @@ if (isset($_POST['create'])) {
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
+
+
+
+  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "",
+    "logo": "images/default-logo.png"
+}</script>
   <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="Vuelos">
+  <meta property="og:title" content="Destinos">
   <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/">
 
@@ -80,22 +119,33 @@ if (isset($_POST['create'])) {
 <body>
   <!-- Barra de navegacion -->
   <header>
-    <h2 class="logo">Giorno</h2>
+    <img class="logo" src="./css/image/Logo2.png" >
     <nav class="navigation">
       <button class="btnViajes">Viajes</button>
-      <button class="btnTransport">Transporte</button>
       <button class="btnHoteles">Hoteles</button>
-      <button class="btnLogin-popup">Login</button>
+      <button class="btnTransport">Transporte</button>
+      
 
+      <?php
+
+      if (!(isset($_GET['TOKEN']) && DB::query('SELECT * FROM usuario WHERE token = :token', array(':token' => $_GET['TOKEN'])))) {
+        echo "<button class='btnLogin-popup'>Login</button>";
+      }
+
+      ?>
     </nav>
   </header>
   <!-- fin barra de navegacion -->
+
+
   <!-- Login register -->
   <div class="wrapper">
     <span class="icon-close">
       <ion-icon name="close"></ion-icon>
     </span>
 
+
+    <!-- login -->
     <div class="form-box login">
       <h2>Login</h2>
       <form action="#">
@@ -123,8 +173,10 @@ if (isset($_POST['create'])) {
         </div>
       </form>
     </div>
+    <!-- fin login -->
 
 
+    <!-- register -->
     <div class="form-box register">
       <h2>Registro</h2>
       <form action="#">
@@ -152,7 +204,6 @@ if (isset($_POST['create'])) {
         <div class="remeber-forgot">
           <label><input type="checkbox">Estoy de acurdo
             con los terminos</label>
-
         </div>
         <button type="submit" class="btn">Registrar</button>
         <div class="login-register">
@@ -160,8 +211,13 @@ if (isset($_POST['create'])) {
         </div>
       </form>
     </div>
+    <!-- fin register -->
+
+
   </div>
   <!-- fin login register -->
+
+
   <!-- Transportes -->
   <div class="transport">
     <span class="closeT">
@@ -169,10 +225,13 @@ if (isset($_POST['create'])) {
     </span>
     <section
       class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-container-align-center-xs u-section-1"
-      id="sec-f731">
+      id="sec-f731" style="border-radius: 20px;">
+      <h1 class="u-text u-text-default u-title u-text-1" style="color: white">Transportes</h1>
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
+
+
             <!-- Autobus -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
               <div class="u-container-layout u-similar-container u-container-layout-1">
@@ -189,11 +248,17 @@ if (isset($_POST['create'])) {
                   no tener que
                   manejar<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin autobus -->
+
+
             <!-- Carro -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
               <div class="u-container-layout u-similar-container u-container-layout-2">
@@ -209,11 +274,17 @@ if (isset($_POST['create'])) {
                   Puede rentar uno de nuestros autos por si desea conocer su lugar de hospedaje y
                   mas<br><br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin carro -->
+
+
             <!-- bici -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-3">
               <div class="u-container-layout u-similar-container u-container-layout-3">
@@ -230,11 +301,17 @@ if (isset($_POST['create'])) {
                   experiencia de un pueblito
                   mágico&nbsp; <br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin bici -->
+
+
             <!-- moto -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-4">
               <div class="u-container-layout u-similar-container u-container-layout-4">
@@ -251,11 +328,17 @@ if (isset($_POST['create'])) {
                   vivir una experiencia
                   inolvidable<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin moto -->
+
+
             <!-- burro -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-5">
               <div class="u-container-layout u-similar-container u-container-layout-5">
@@ -272,11 +355,17 @@ if (isset($_POST['create'])) {
                   cobrar si nos da un
                   paseo en el :)<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin burro -->
+
+
             <!-- pata -->
             <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-6">
               <div class="u-container-layout u-similar-container u-container-layout-6">
@@ -292,17 +381,25 @@ if (isset($_POST['create'])) {
                   O puede optar por caminar siendo una opción muy económica para usted y de paso hacer
                   ejercicio<br>
                 </p>
+
+
                 <!-- boton de reserva -->
                 <button type="submit" class="btn">Reservar</button>
+
+
               </div>
             </div>
             <!-- fin pata -->
+
+
           </div>
         </div>
       </div>
     </section>
   </div>
   <!-- fin transport -->
+
+
   <!-- Viajes -->
   <div class="viajes">
     <span class="closeV">
@@ -310,9 +407,11 @@ if (isset($_POST['create'])) {
     </span>
     <!-- plantilla aqui -->
     <section>
+
+
       <!-- intro -->
       <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="800"
-        data-image-height="511" id="sec-253e">
+        data-image-height="511" id="sec-253e" style="border-radius: 20px;">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
           <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
             <lt-div spellcheck="false" class="lt-highlighter__wrapper"
@@ -337,6 +436,8 @@ if (isset($_POST['create'])) {
         </div>
       </section>
       <!-- fin intro -->
+
+
       <!-- intro 2 -->
       <section class="u-clearfix u-grey-5 u-section-2" id="sec-0cb0">
         <div class="u-clearfix u-sheet u-sheet-1">
@@ -384,12 +485,13 @@ if (isset($_POST['create'])) {
         <!-- fin intro 2 -->
 
 
-
         <!-- reserva hoteles -->
         <header class="u-clearfix u-header u-header" id="sec-c0ed">
           <section class="u-align-center u-clearfix u-white u-section-2" id="sec-605b">
             <div class="u-clearfix u-sheet u-sheet-1">
               <div class="u-accordion u-spacing-2 u-accordion-1">
+
+
                 <!-- opc de vuelo 1 -->
                 <div class="u-accordion-item u-accordion-item-1">
                   <a class="active u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-1"
@@ -460,11 +562,18 @@ if (isset($_POST['create'])) {
                       </div>
                       <p class="u-text u-text-palette-1-base u-text-10">Acapulco</p>
                       <p class="u-text u-text-palette-5-base u-text-11">Terminal 1</p>
+
+
+                      <!-- boton reservar vuelo -->
                       <button type="submit" class="btn">Reservar</button>
+
+
                     </div>
                   </div>
                 </div>
                 <!-- fin opc vuelo 1 -->
+
+
                 <!-- opc vuelo 2 -->
                 <div class="u-accordion-item u-accordion-item-2">
                   <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-2"
@@ -552,11 +661,18 @@ if (isset($_POST['create'])) {
                       </div>
                       <p class="u-text u-text-palette-1-base u-text-21">Acapulco</p>
                       <p class="u-text u-text-palette-5-base u-text-22">Terminal 1</p>
+
+
+                      <!-- boton reservar vuelo -->
                       <button type="submit" class="btn">Reservar</button>
+
+
                     </div>
                   </div>
                 </div>
                 <!-- fin opc vuelo 2 -->
+
+
                 <!-- vuelo 3 -->
                 <div class="u-accordion-item u-accordion-item-3">
                   <a class="u-accordion-link u-border-1 u-border-active-grey-25 u-border-grey-30 u-border-hover-grey-30 u-border-no-left u-border-no-right u-border-no-top u-button-style u-text-active-black u-text-grey-50 u-text-hover-black u-accordion-link-3"
@@ -652,25 +768,149 @@ if (isset($_POST['create'])) {
                       </div>
                       <p class="u-text u-text-palette-1-base u-text-32">Acapulco</p>
                       <p class="u-text u-text-palette-5-base u-text-33">Terminal 1</p>
+
+
+                      <!-- boton reservar vuelo -->
                       <button type="submit" class="btn">Reservar</button>
+
+
                     </div>
                   </div>
                 </div>
                 <!-- fin opc vuelo 3 -->
+
+
               </div>
             </div>
           </section>
 
-  </div>
 
+  </div>
   <!-- fin Viajes -->
+
+
   <!-- hoteles -->
   <div class="hotel">
     <span class="closeH">
       <ion-icon name="close"></ion-icon>
     </span>
     <!-- plantilla aqui -->
+    <section
+      class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-container-align-center-xs u-section-1"
+      id="sec-f731" style="border-radius: 20px;">
+      <!--INFORMACIÓN IMPORTANTE -->
+      <h1 class="u-text u-text-default u-title u-text-1" style="color: white">Hoteles</h1>
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <!--HOTEL ACAPULCO -->
+          <div class="u-repeater u-repeater-1">
+            <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <!-- Imagen del hotel
+                                Tiene funcion onclick en script.js para que al tocarla cambie de foto-->
+                <img src="./images/hoteles/Acapulco.jpg" alt=""
+                  class="u-expanded-width u-image u-image-default u-image-1" data-image-width="1280"
+                  data-image-height="853" data-lang-es="" id="imgAcapulco" onclick="changeImageAcapulco()" />
+
+                <!--Precio por día -->
+                <h4 class="u-text u-text-default u-text-palette-4-base u-text-4" data-lang-es="$ 4000">
+                  Desde $4000</h4>
+
+                <!--Nombre del hotel -->
+                <h5 class="u-text u-text-default u-text-5" data-lang-es="Surf travel">Hotel Solé<br>
+
+                  <!--Locación por día -->
+                  <h5 class="estado" data-lang-es="Ocean travel">ACAPULCO<br> </h5>
+
+                  <!--Información -->
+                  <p class="u-text u-text-default u-text-3"
+                    data-lang-es="Sample text. Click to select the text box. Click again or double click to start editing the text.">
+                    Hotel Solé es un hotel en Acapulco ubicado en el complejo Mundo Imperial, el cual está formado por
+                    el Fórum Mundo Imperial, el paseo al aire libre Promenade y el centro de convenciones Expo Mundo
+                    Imperial.
+                    El hotel se localiza en la zona de Acapulco Diamante, a 700 metros del centro comercial La Isla
+                    Acapulco, a 2 kilómetros de la playa y a 3 kilómetros del Aeropuerto Internacional General Juan N
+                    Álvarez (ACA).
+                    La Costera Miguel Alemán se encuentra a 15 kilómetros de distancia.<br>
+                  </p>
+                  <button type="submit" class="btn">Reservar</button>
+              </div>
+            </div>
+            <!--HOTEL CANCUN-->
+            <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <!-- Imagen del hotel
+                                Tiene funcion onclick en script.js para que al tocarla cambie de foto-->
+                <img src="./images/hoteles/Cancun.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-2"
+                  data-image-width="1280" data-image-height="853" data-lang-es="" id="imgCancun"
+                  onclick="changeImageCancun()" />
+
+                <!--Precio por día -->
+                <h4 class="u-text u-text-default u-text-palette-4-base u-text-4" data-lang-es="$ 6000">
+                  Desde $6000</h4>
+
+                <!--Nombre -->
+                <h5 class="u-text u-text-default u-text-5" data-lang-es="Surf travel">Hotel Rose<br>
+                </h5>
+
+                <!--Lugar -->
+                <h5 class="estado" data-lang-es="Ocean travel">CANCÚN<br> </h5>
+
+                <!--Información -->
+                <p class="u-text u-text-default u-text-6"
+                  data-lang-es="Sample text. Click to select the text box. Click again or double click to start editing the text.">
+                  Rose es un hotel familiar y todo incluido localizado frente a la playa en la Zona Hotelera de Cancún.
+                  Esta propiedad con temática italiana ofrece actividades para toda la familia, así como un laboratorio
+                  de música donde se pueden tomar clases de guitarra o batería.
+                  Además hay cuatro piscinas, una de ellas en forma de laguna y una para niños con juegos.
+                  También tiene cinco restaurantes de comida internacional gourmet, de especialidad mexicana y asiática,
+                  y siete bares y lounges donde se sirven bebidas, cocteles y vinos nacionales e importados.<br><br>
+                </p>
+                <button type="submit" class="btn">Reservar</button>
+              </div>
+            </div>
+            <!--HOTEL PTO VALLARTA-->
+            <div class="u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-3">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <!-- Imagen del hotel
+                                Tiene funcion onclick en script.js para que al tocarla cambie de foto-->
+                <img src="./images/hoteles/PuertoVallarta.jpg" alt=""
+                  class="u-expanded-width u-image u-image-default u-image-3" data-image-width="1280"
+                  data-image-height="853" data-lang-es="" id="imgPuertoVallarta" onclick="changeImageVallarta()" />
+
+                <!--Precio por día -->
+                <h4 class="u-text u-text-default u-text-palette-4-base u-text-7" data-lang-es="$ 700">
+                  Desde $7000</h4>
+
+                <!--Nombre -->
+                <h5 class="u-text u-text-default u-text-8" data-lang-es="Ocean travel">Hotel Spiaggia<br>
+                </h5>
+
+                <!--Lugar -->
+                <h5 class="estado" data-lang-es="Ocean travel">PUERTO VALLARTA<br>
+                </h5>
+
+                <!--Información -->
+                <p class="u-text u-text-default u-text-9"
+                  data-lang-es="Sample text. Click to select the text box. Click again or double click to start editing the text.">
+                  Spiaggia es un hotel de playa familiar todo incluido ubicado en la Bahía de Banderas en Puerto
+                  Vallarta. Tiene una arquitectura mexicana contemporánea y está rodeado por la Sierra Madre Ocidental.
+                  Cuenta con 291 confortables habitaciones y suites, una variada oferta gastronómica y actividades para
+                  toda la familia.
+                  Las habitaciones están equipadas con balcón o terraza, televisión con canales por cable, aire
+                  acondicionado, minibar resurtido diariamente y wifi. <br>
+                </p>
+                <button type="submit" class="btn">Reservar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+  <!-- fin hotel -->
+
+
   <script src='./js/scripts.js'></script>
   <script src='./js/navigation.js'></script>
   <script src='./js/jquery-1.9.1.min.js'></script>
@@ -678,6 +918,8 @@ if (isset($_POST['create'])) {
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <!--para buscar los iconos usados en la pagina o nuevos ir al url:https://ionic.io/ionicons -->
+
+
 </body>
 
 </html>
